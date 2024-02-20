@@ -1,4 +1,4 @@
-**README du Projet - Application PHP de Gestion d'Utilisateurs**
+** Application PHP de Gestion d'Utilisateurs**
 
 **Objectif du Projet :**
 
