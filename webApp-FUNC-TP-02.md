@@ -61,11 +61,11 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     e. Wireframe
 
 2. **UML :**
-    a. Diagramme UseCase : [Lien vers Lucidchart](https://www.lucidchart.com/pages/uml-use-case-diagram)
-    b. Diagramme d'activité : [Lien vers Lucidchart](https://www.lucidchart.com/pages/fr/diagramme-dactivite-uml)
-    c. Diagramme de flux (Système) : [Lien vers Lucidchart](https://www.lucidchart.com/pages/fr/diagramme-de-flux-de-donnees)
-    d. Diagramme de séquence : [Lien vers Lucidchart](https://www.lucidchart.com/pages/fr/diagramme-de-sequence-uml)
-    e. Diagramme entité-association ERD : [Lien vers Edrawsoft](https://www.edrawsoft.com/fr/what-is-entity-relationship-diagram-erd.html)
+    a. Diagramme UseCase : [Lien vers Lucidchart](https://www.lucidchart.com/pages/uml-use-case-diagram) </br>
+    b. Diagramme d'activité : [Lien vers Lucidchart](https://www.lucidchart.com/pages/fr/diagramme-dactivite-uml)</br>
+    c. Diagramme de flux (Système) : [Lien vers Lucidchart](https://www.lucidchart.com/pages/fr/diagramme-de-flux-de-donnees)</br>
+    d. Diagramme de séquence : [Lien vers Lucidchart](https://www.lucidchart.com/pages/fr/diagramme-de-sequence-uml)</br>
+    e. Diagramme entité-association ERD : [Lien vers Edrawsoft](https://www.edrawsoft.com/fr/what-is-entity-relationship-diagram-erd.html)</br>
 
 3. **Versioning :**
     a. Mise en place d'un repository GitHub pour assurer un versioning continu du projet.
