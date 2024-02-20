@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
    d. Arborescence du site
    e. Wireframe
 
-2. **UML :**
+2. **UML :**<br>
    a. [Diagramme UseCase](https://www.lucidchart.com/pages/uml-use-case-diagram)<br>
    b. [Diagramme d'activité](https://www.lucidchart.com/pages/fr/diagramme-dactivite-uml)<br>
    c. [Diagramme de flux (Système)](https://www.lucidchart.com/pages/fr/diagramme-de-flux-de-donnees)<br>
