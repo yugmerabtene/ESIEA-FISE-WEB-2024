@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
    - Diagramme de flux (Système)
      ![Diagramme de Flux](https://github.com/yugmerabtene/ESIEA-WEB/assets/3670077/bf58869e-8552-4b39-9e37-2fc086f64d5f)
 
-## Évaluation (sur 20)
+## Évaluation (sur 10)
 
 | Critères                                        | Points |
 |--------------------------------------------------|--------|
