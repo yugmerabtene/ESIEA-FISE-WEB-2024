@@ -98,27 +98,27 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
 | Critères                                        | Points |
 |--------------------------------------------------|--------|
 | **Implémentation des fonctionnalités demandées**  |        |
-| Inscription (Vérification, Validation)           |   3    |
-| Connexion (Vérification, Redirection)             |   3    |
-| Dashboard (Consultation des informations)        |   3    |
-| Messages d'erreur génériques                     |   2    |
-| Gestion sécurisée des sessions                  |   2    |
-| Politiques de mot de passe                      |   2    |
+| Inscription (Vérification, Validation)           |   0.5    |
+| Connexion (Vérification, Redirection)             |   0.5    |
+| Dashboard (Consultation des informations)        |   0.5    |
+| Messages d'erreur génériques                     |   0.5    |
+| Gestion sécurisée des sessions                  |   0.5    |
+| Politiques de mot de passe                      |   0.5    |
 | **Sécurité**                                    |      |
-| XSS                                             |   3    |
-| CSRF                                            |   3    |
-| INJECTION SQL                                   |   3    |
+| XSS                                             |   0.5    |
+| CSRF                                            |   0.5    |
+| INJECTION SQL                                   |   0.5    |
 | **PHASE DE TESTS**                              |       |
-| Tests unitaires                                 |   2    |
+| Tests unitaires                                 |   0.5    |
 | Tests de sécurité                               |   1    |
 | **Technologies utilisées**                       |      |
-| Backend (Utilisation de PHP)                    |   1    |
-| Frontend (Utilisation de HTML5, CSS3)            |   1    |
-| Base de Données (MySQL)                         |   2    |
+| Backend (Utilisation de PHP)                    |   0.25    |
+| Frontend (Utilisation de HTML5, CSS3)            |   0.25   |
+| Base de Données (MySQL)                         |   0.25    |
 | **Organisation du Code**                         |      |
-| Structure des dossiers et fichiers              |   2    |
-| Cohérence de la base de données avec le code    |   2    |
+| Structure des dossiers et fichiers              |   1    |
+| Cohérence de la base de données avec le code    |   0.25    |
 | **Analyse et Conception**                        |      |
-| Diagrammes UML (UseCase, Activité, Flux, Séquence, ERD) |   4    |
+| Diagrammes UML (UseCase, Activité, Flux, Séquence, ERD) |   2    |
 
-*Total : 20/20*
+*Total : 10/10*
