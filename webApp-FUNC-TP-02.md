@@ -63,7 +63,14 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     password VARCHAR(255) NOT NULL
 );
 ```
-4. **Résolution :**
-   2. **UML :**
-      c. Diagramme de flux (Système)
+4. **Analyse et conception :**
+   1. **UML :**   
+
+   a. [Diagramme UseCase](https://www.lucidchart.com/pages/uml-use-case-diagram)<br>
+   b. [Diagramme d'activité](https://www.lucidchart.com/pages/fr/diagramme-dactivite-uml)<br>
+   c. [Diagramme de flux (Système)](https://www.lucidchart.com/pages/fr/diagramme-de-flux-de-donnees)<br>
+   d. [Diagramme de séquence](https://www.lucidchart.com/pages/fr/diagramme-de-sequence-uml)<br>
+   e. [Diagramme entité-association ERD](https://www.edrawsoft.com/fr/what-is-entity-relationship-diagram-erd.html)<br>
+5. **Résolution :** 
+   a. Diagramme de flux (Système) 
       ![Diagramme de Flux](https://github.com/yugmerabtene/ESIEA-WEB/assets/3670077/bf58869e-8552-4b39-9e37-2fc086f64d5f)
