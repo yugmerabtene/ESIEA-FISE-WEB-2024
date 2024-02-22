@@ -1,0 +1,17 @@
+{
+    "name": "yug/web-app-v.0.1",
+    "require": {
+        "predis/predis": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yug\\WebAppV01\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yugmerabtene",
+            "email": "yug.merabtene@gmail.com"
+        }
+    ]
+}
