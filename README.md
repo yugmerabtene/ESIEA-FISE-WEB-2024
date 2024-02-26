@@ -38,7 +38,7 @@
 
 **Module 5: Programmation Web avec PHP Procédurale (10 points)**
 1. TP 1: PHP Procédurale gestion de formulaires et sécurité (4 points)
-2. TP 2: PHP Procédurale développement d'une application en procédurale fonctionnel (4 points)
+2. TP 2: PHP Procédurale développement d'une application multilingue en procédurale fonctionnel (4 points)
 3. QCM PHP (10 questions, chaque question notée sur 0.25)
 
 ---
