@@ -25,7 +25,7 @@
 
 ---
 
-**Module 4: Analyse et Conception Procédurale fonctionnelle (10 points)**
+**Module 4: Analyse et Conception Procédurale fonctionnelle (5 points)**
 1. TP 1: Analyse et Conception (5 points)
    - UML pour le module 5 TP2:
      - Diagramme UseCase: 1 point
