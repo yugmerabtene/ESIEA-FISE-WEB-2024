@@ -51,9 +51,9 @@
 ---
 
 **Module 7: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (10 points)**
-1. TP 1: Développement d'une application de gestion d'utilisateurs en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module 4) (**4 points**)
-2. TP 2: Poursuite du développement du module 7 TP 1 en intégrant des API, type météo ou autres (https://api.gouv.fr/) / MVC (**3 points**)
-3. TD 3 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**3 points**)
+1. TP 1: Développement d'une application de gestion d'utilisateurs en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module 4) (**6 points**)
+2. TP 2: Poursuite du développement du module 7 TP 1 en intégrant des API, type météo ou autres (https://api.gouv.fr/) / MVC (**2 points**)
+3. TD 3 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**2 points**)
 
 ---
 
