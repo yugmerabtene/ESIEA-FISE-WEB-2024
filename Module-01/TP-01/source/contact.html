@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Page de contact du site Web-Designer">
+    <meta name="keywords" content="contact, web design, flexbox, design, développement web">
+    <meta name="author" content="Frank Zappa">
+    <title>Contact - Web-Designer</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Web-Designer</div>
+        <nav>
+            <ul>
+                <li><i class="fas fa-home"></i> <a href="index.html">Home</a></li>
+                <li><i class="fas fa-info-circle"></i> <a href="#">Presentation</a></li>
+                <li><i class="fas fa-envelope"></i> Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Contactez-nous</h1>
+            <form action="#" method="post">
+                <!-- Your contact form fields go here -->
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <ol>
+            <li><i class="fas fa-gavel"></i> CGU</li>
+            <li><i class="fas fa-file-contract"></i> CGV</li>
+            <li><i class="fas fa-info-circle"></i> Mentions Légales</li>
+        </ol>
+    </footer>
+</body>
+</html>
