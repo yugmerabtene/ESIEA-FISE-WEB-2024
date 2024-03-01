@@ -5,6 +5,44 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+
+// REGEX
+function validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $confirmPassword) {
+    $errors = [];
+
+    // Validation du nom et prénom (autorise uniquement les lettres et les espaces)
+    if (!preg_match("/^[a-zA-Z\sàáâãäåèéêëìíîïòóôõöùúûüýÿç']+$/", $nom)) {
+        $errors['nom'] = "Le nom n'est pas valide.";
+    }
+
+    if (!preg_match("/^[a-zA-Z\sàáâãäåèéêëìíîïòóôõöùúûüýÿç']+$/", $prenom)) {
+        $errors['prenom'] = "Le prénom n'est pas valide.";
+    }
+
+    // Validation de l'adresse (autorise les lettres, les chiffres, les espaces et les caractères spéciaux courants)
+    if (!preg_match("/^[a-zA-Z0-9\sàáâãäåèéêëìíîïòóôõöùúûüýÿç'-.,]+$/", $adresse)) {
+        $errors['adresse'] = "L'adresse n'est pas valide.";
+    }
+
+    // Validation de l'email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "L'adresse email n'est pas valide.";
+    }
+
+    // Validation du mot de passe
+    if (strlen($password) < 8 || !preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) {
+        $errors['password'] = "Le mot de passe doit avoir au moins 8 caractères, une majuscule et un chiffre.";
+    }
+
+    // Validation de la confirmation du mot de passe
+    if ($password !== $confirmPassword) {
+        $errors['confirm_password'] = "Les mots de passe ne correspondent pas.";
+    }
+
+    return $errors;
+}
+
+
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF
@@ -18,16 +56,28 @@ function handleRegisterAction() {
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirm_password'];
 
-        // Appeler la fonction pour enregistrer l'utilisateur
-        $error = registerUser($nom, $prenom, $adresse, $email, $password, $confirmPassword);
+        // Valider le formulaire
+        $errors = validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $confirmPassword);
 
-        // Si l'enregistrement est réussi, rediriger vers la page de connexion
-        if ($error === true) {
-            header("Location: index.php?action=login");
-            exit();
-        } else {
-            // En cas d'erreur, afficher le message d'erreur sur la page d'inscription
+        // Si des erreurs sont présentes, afficher le formulaire avec les erreurs
+        if (!empty($errors)) {
+            // Ajouter les erreurs au tableau de données pour les afficher dans le formulaire
+            $data['errors'] = $errors;
             include_once 'templates/register.php';
+        } else {
+            // Appeler la fonction pour enregistrer l'utilisateur
+            $error = registerUser($nom, $prenom, $adresse, $email, $password, $confirmPassword);
+
+            // Si l'enregistrement est réussi, rediriger vers la page de connexion
+            if ($error === true) {
+                header("Location: index.php?action=login");
+                exit();
+            } else {
+                // En cas d'erreur, afficher le message d'erreur sur la page d'inscription
+                // Ajouter le message d'erreur au tableau de données pour l'afficher dans le formulaire
+                $data['error'] = $error;
+                include_once 'templates/register.php';
+            }
         }
     } else {
         // Afficher le formulaire d'inscription si la requête n'est pas de type POST
