@@ -41,18 +41,19 @@
 2. TP 2: PHP Procédurale développement d'une application multilingue en procédurale fonctionnel (**6 points**)
 3. QCM PHP (10 questions, chaque question notée sur 0.5) (**5 points**)
 
+
 ---
 
 **Module 6: JavaScript et Librairie jQuery (10 points)**
-1. TP 1: JavaScript Vanilla et DOM, intégration dans le TP2 du module 1 (**2.5 points**)
-2. TP 2: jQuery et intégration dans le TP2 du module 1 (**2.5 points**)
+1. TP 1: JavaScript Vanilla et DOM, intégration dans le TP2 du module 5 (**2.5 points**)
+2. TP 2: jQuery et intégration dans le TP2 du module 5 (**2.5 points**)
 3. QCM JavaScript et jQuery (10 questions, chaque question notée sur 0.50 (**5 points**)
 
 ---
 
 **Module 7: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (10 points)**
 1. TP 1: Développement d'une application de gestion d'utilisateurs en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module 4) (**6 points**)
-2. TP 2: Poursuite du développement du module 7 TP 1 en intégrant des API, type météo ou autres (https://api.gouv.fr/) / MVC (**2 points**)
+2. TP 2: Poursuite du développement du module 7 TP 1 en intégrant des API : DAN, METEO (https://api.gouv.fr/) (**2 points**)
 3. TD 3 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**2 points**)
 
 ---
