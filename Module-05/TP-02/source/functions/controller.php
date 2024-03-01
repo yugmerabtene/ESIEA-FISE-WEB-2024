@@ -42,7 +42,6 @@ function validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $c
     return $errors;
 }
 
-
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF
