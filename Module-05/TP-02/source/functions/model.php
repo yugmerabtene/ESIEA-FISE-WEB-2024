@@ -87,11 +87,4 @@ function closeAccount($id) {
         echo "Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage();
     }
 }
-
-
-// Fonction de test PHPUnit pour tester le modèle
-function testModel() {
-    // Insérez ici vos tests PHPUnit pour les fonctions du modèle
-    // Assurez-vous de tester différents scénarios (ex. : insertion, mise à jour, suppression, etc.)
-}
 ?>
