@@ -9,18 +9,26 @@
 </head>
 <body>
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="index.php?action=register">Inscription</a></li>
-            <li><a href="index.php?action=login">Connexion</a></li>
-            <?php
-                // Afficher le lien du tableau de bord uniquement si l'utilisateur est connecté
-                if (isset($_SESSION['user_id'])) {
-                    echo '<li><a href="index.php?action=dashboard">Tableau de bord</a></li>';
-                    echo '<li><a href="index.php?action=logout">Déconnexion</a></li>';
-                }
-            ?>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <?php
+                    // Si l'utilisateur n'est pas connecté, afficher les liens d'inscription et de connexion
+                    if (!isset($_SESSION['user_id'])) {
+                        echo '<li><a href="index.php?action=register">Inscription</a></li>';
+                        echo '<li><a href="index.php?action=login">Connexion</a></li>';
+                    } else {
+                        // Si l'utilisateur est connecté, afficher les liens du tableau de bord et de déconnexion
+                        echo '<li><a href="index.php?action=dashboard">Tableau de bord</a></li>';
+                        echo '<li><a href="index.php?action=logout">Déconnexion</a></li>';
+                    }
+                ?>
+            </ul>
+        </nav>
     </header>
+    <?php
+    // Démarrer la session (si elle n'est pas déjà active)
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    ?>
