@@ -1,6 +1,4 @@
 <!-- home.php -->
-<?php include_once 'parts/header.php'; ?>
-
 <main>
     <section>
         <h1>Bienvenue sur notre site!</h1>
@@ -8,4 +6,4 @@
     </section>
 </main>
 
-<?php include_once 'parts/footer.php'; ?>
+

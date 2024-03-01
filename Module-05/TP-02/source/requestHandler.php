@@ -5,5 +5,5 @@ include_once 'functions/controller.php';
 /**
  * Contrôleur principal qui gère les différentes actions
  */
-function Controller() 
+Controller() 
 ?>

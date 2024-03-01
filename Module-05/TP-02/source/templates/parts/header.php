@@ -1,3 +1,10 @@
+
+<?php
+ // Démarrer la session (si elle n'est pas déjà active)
+     if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,8 +34,5 @@
         </nav>
     </header>
     <?php
-    // Démarrer la session (si elle n'est pas déjà active)
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
-    ?>
+   
+   

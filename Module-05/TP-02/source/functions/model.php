@@ -2,9 +2,10 @@
 $pdo = new PDO('mysql:host=localhost;dbname=siea_web', 'root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-function registerUser($nom, $prenom, $adresse, $email, $password) {
+function registerUser($nom, $prenom, $adresse, $email, $password, $confirmPassword) {
     global $pdo;
-
+    // Vérifier le jeton CSRF
+    verifyCsrfToken();
     try {
         // Vérifier si l'email existe déjà (Prévention d'injection SQL)
         $stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
@@ -12,19 +13,20 @@ function registerUser($nom, $prenom, $adresse, $email, $password) {
         $existingUser = $stmt->fetch();
 
         if ($existingUser) {
-            // L'email existe déjà, afficher un message d'erreur
-            echo "Cet email est déjà enregistré. Choisissez un autre email.";
+            // L'email existe déjà, renvoyer une erreur
+            return "email_exists";
+        } elseif ($password !== $confirmPassword) {
+            // Les mots de passe ne correspondent pas, renvoyer une erreur
+            return "password_mismatch";
         } else {
-            // Enregistrer le nouvel utilisateur (Requête préparée pour prévenir l'injection SQL)
+            // Enregistrement réussi
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, prenom, adresse, email, password) VALUES (?, ?, ?, ?, ?)");
-            $stmt->execute([$nom, $prenom, $adresse, $email, $password]);
-            
-            // Rediriger vers la page de profil après l'inscription réussie
-            header("Location: index.php?action=profil");
-            exit();
+            $stmt->execute([$nom, $prenom, $adresse, $email, $hashedPassword]);
+            return true;
         }
     } catch (PDOException $e) {
-        echo "Erreur lors de l'enregistrement de l'utilisateur : " . $e->getMessage();
+        return "Erreur lors de l'enregistrement de l'utilisateur : " . $e->getMessage();
     }
 }
 
@@ -40,7 +42,7 @@ function loginUser($email, $password) {
         if ($user && password_verify($password, $user['password'])) {
             // Connexion réussie, stocker l'ID de l'utilisateur en session
             $_SESSION['user_id'] = $user['id'];
-            
+
             // Rediriger vers la page de profil après la connexion réussie
             header("Location: index.php?action=profil");
             exit();
@@ -60,9 +62,9 @@ function updateUserInfo($id, $nom, $prenom, $email, $password) {
         // Mettre à jour les informations de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
         $stmt = $pdo->prepare("UPDATE utilisateurs SET nom = ?, prenom = ?, email = ?, password = ? WHERE id = ?");
         $stmt->execute([$nom, $prenom, $email, $password, $id]);
-        
+
         // Rediriger vers la page de profil après la mise à jour réussie
-        header("Location: index.php?action=profil");
+        header("Location: index.php?action=dashboard");
         exit();
     } catch (PDOException $e) {
         echo "Erreur lors de la mise à jour des informations de l'utilisateur : " . $e->getMessage();
@@ -76,7 +78,7 @@ function closeAccount($id) {
         // Supprimer le compte de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
         $stmt = $pdo->prepare("DELETE FROM utilisateurs WHERE id = ?");
         $stmt->execute([$id]);
-        
+
         // Déconnecter l'utilisateur et rediriger vers la page d'accueil
         session_destroy();
         header("Location: index.php");
@@ -85,6 +87,7 @@ function closeAccount($id) {
         echo "Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage();
     }
 }
+
 
 // Fonction de test PHPUnit pour tester le modèle
 function testModel() {
