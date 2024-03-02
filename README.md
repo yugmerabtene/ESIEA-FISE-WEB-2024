@@ -3,20 +3,19 @@
 ---
 
 **Module 1: Fondamentaux du Web (10 points)**
-1. TP 1: HTML5, CSS3, Flexbox (**1 point**)
-2. TP 2: Réalisation d'un portfolio en HTML5, CSS3 avec Flexbox (**4 points**)
-3. QCM HTML (20 questions, chaque question notée sur 0.25) (**5 points**)
+1. TP 1: HTML5, CSS3, Flexbox : réalisation d'un site onePage responsive (**10 point**)
+3. QCM HTML (20 questions, chaque question notée sur 0.50) (**10 points**)
 
 ---
 
 **Module 2: SEO et RGPD (10 points)**
-1. TP 1: Intégration du SEO & RGPD dans le TP2 du module 1 (**5 points**)
+1. TP 1: Intégration du SEO & RGPD dans le TP1 du module 1 (**5 points**)
 2. QCM SEO et RGPD (10 questions, chaque question notée sur 0.5) (**5 points**)
 
 ---
 
 **Module 3: Cahier des Charges (5 points)**
-1. TP 1: Réalisation d'un Cahier des Charges (**5 points**)
+1. TP 1: Réalisation d'un Cahier des charges pour le TP 2 Module 5 (**5 points**)
    - Description Technique: **1 point**
    - Description Fonctionnelle: **1 point**
    - Arborescence: **1 point**
@@ -27,7 +26,7 @@
 
 **Module 4: Analyse et Conception Procédurale fonctionnelle (5 points)**
 1. TP 1: Analyse et Conception (**5 points**)
-   - UML pour le module 5 TP2:
+   - UML pour le TP 2 Module 5:
      - Diagramme UseCase: **1 point**
      - Diagramme d'activité: **1 point**
      - Diagramme de flux (Système): **1 point**
@@ -38,7 +37,7 @@
 
 **Module 5: Programmation Web avec PHP Procédurale (15 points)**
 1. TP 1: PHP Procédurale gestion de formulaires et sécurité (**4 points**)
-2. TP 2: PHP Procédurale développement d'une application multilingue en procédurale fonctionnel (**6 points**)
+2. TP 2: PHP Procédurale développement d'un portfolio doté d'un système de gestion d'utilisateur  (**6 points**)
 3. QCM PHP (10 questions, chaque question notée sur 0.5) (**5 points**)
 
 
