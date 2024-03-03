@@ -1,6 +1,4 @@
 <?php
-
-
 /** Controller */
 include_once 'service.php';
 include_once 'security.php';
@@ -9,8 +7,6 @@ include_once 'model.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
-
 /**
  * Contrôleur principal qui gère les différentes actions
  */
