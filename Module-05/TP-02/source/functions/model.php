@@ -59,21 +59,21 @@ function loginUser($email, $password) {
     }
 }
 
-function updateUserInfo($id, $nom, $prenom, $email, $password) {
+function getUserInfos($id) {
     global $pdo;
 
     try {
-        // Mettre à jour les informations de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
-        $stmt = $pdo->prepare("UPDATE utilisateurs SET nom = ?, prenom = ?, email = ?, password = ? WHERE id = ?");
-        $stmt->execute([$nom, $prenom, $email, $password, $id]);
+        // Récupérer les informations de l'utilisateur par son ID (Requête préparée pour prévenir l'injection SQL)
+        $stmt = $pdo->prepare("SELECT id, nom, prenom, adresse, email FROM utilisateurs WHERE id = ?");
+        $stmt->execute([$id]);
+        $userInfo = $stmt->fetch();
 
-        // Rediriger vers la page de profil après la mise à jour réussie
-        header("Location: index.php?action=dashboard");
-        exit();
+        return $userInfo;
     } catch (PDOException $e) {
-        echo "Erreur lors de la mise à jour des informations de l'utilisateur : " . $e->getMessage();
+        echo "Erreur lors de la récupération des informations de l'utilisateur : " . $e->getMessage();
     }
 }
+
 
 function closeAccount($id) {
     global $pdo;
