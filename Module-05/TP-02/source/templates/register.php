@@ -3,14 +3,14 @@
         <h1>Inscription</h1>
             <form action="index.php?action=register" method="post">
             <?php if (isset($_SESSION['csrf_token'])) : ?>
-<<<<<<< Updated upstream
+
             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-=======
+
                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <?php else : ?>
                 <?php $_SESSION['csrf_token'] = functions/generateCsrfToken(); ?>
                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
->>>>>>> Stashed changes
+
             <?php endif; ?>
 
             <label for="nom">Nom:</label>
