@@ -1,17 +1,14 @@
 <?php
-<<<<<<< Updated upstream
-=======
+
 
 /** Controller */
 include_once 'service.php';
 include_once 'security.php';
->>>>>>> Stashed changes
 include_once 'model.php';
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-<<<<<<< Updated upstream
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF
@@ -94,13 +91,11 @@ function sanitizeInput($input) {
 }
 
 
-=======
->>>>>>> Stashed changes
 
 /**
  * Contrôleur principal qui gère les différentes actions
  */
-class Controller() {
+function controller() {
     // Démarrer la session (si elle n'est pas déjà active)
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
