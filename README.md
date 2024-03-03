@@ -37,7 +37,7 @@
 
 **Module-05: Programmation Web avec PHP Procédurale (15 points)**
 1. TP-01: PHP Procédurale gestion de formulaires et sécurité (**5 points**)
-2. TP-02: PHP Procédurale développement d'un portfolio doté d'un système de gestion d'utilisateur  (**5 points**)
+2. TP-02: PHP Procédurale développement d'un système de gestion d'utilisateurs  (**5 points**)
 3. QCM PHP (10 questions, chaque question notée sur 0.5) (**5 points**)
 
 ---
