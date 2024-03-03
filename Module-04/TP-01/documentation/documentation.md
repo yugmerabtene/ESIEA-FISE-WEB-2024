@@ -1,7 +1,7 @@
-1. ***USECASE***
-   ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/69bf9c89-3642-4949-a0cd-19ddcde26f4e)
+1. ***USECASE***  
+   ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/69bf9c89-3642-4949-a0cd-19ddcde26f4e)  
 
-a. **Cas d'utilisation principal : Se Connecter et Accéder au Tableau de Bord**
+a. **Cas d'utilisation principal : Se Connecter et Accéder au Tableau de Bord**  
    - **Acteurs :** Utilisateur
    - **Description :** L'utilisateur se connecte avec succès et est redirigé vers son tableau de bord.
    - **Scénario Principal :**
