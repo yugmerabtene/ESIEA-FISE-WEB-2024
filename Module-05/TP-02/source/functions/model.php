@@ -1,11 +1,15 @@
 <?php
+
+include_once 'service.php';
+include_once 'security.php';
+
 $pdo = new PDO('mysql:host=localhost;dbname=siea_web', 'root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 function registerUser($nom, $prenom, $adresse, $email, $password, $confirmPassword) {
     global $pdo;
     // Vérifier le jeton CSRF
-    verifyCsrfToken();
+    \functions\verifyCsrfToken();
     try {
         // Vérifier si l'email existe déjà (Prévention d'injection SQL)
         $stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
@@ -44,7 +48,7 @@ function loginUser($email, $password) {
             $_SESSION['user_id'] = $user['id'];
 
             // Rediriger vers la page de profil après la connexion réussie
-            header("Location: index.php?action=profil");
+            header("Location: index.php?action=dashboard");
             exit();
         } else {
             // Échec de connexion, afficher un message d'erreur

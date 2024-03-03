@@ -1,8 +1,17 @@
 <?php
+<<<<<<< Updated upstream
+=======
+
+/** Controller */
+include_once 'service.php';
+include_once 'security.php';
+>>>>>>> Stashed changes
 include_once 'model.php';
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+<<<<<<< Updated upstream
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF
@@ -85,11 +94,13 @@ function sanitizeInput($input) {
 }
 
 
+=======
+>>>>>>> Stashed changes
 
 /**
  * Contrôleur principal qui gère les différentes actions
  */
-function controller() {
+class Controller() {
     // Démarrer la session (si elle n'est pas déjà active)
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
@@ -97,31 +108,30 @@ function controller() {
 
     // Routes
     if (isset($_GET['action'])) {
-        $action = $_GET['action'];
-
+        $action = $_GET['action'];        
         // Protection CSRF pour toutes les actions POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            verifyCsrfToken();
+            \functions\verifyCsrfToken();
         }
 
         switch ($action) {
             case 'register':
-                handleRegisterAction();
+                \functions\handleRegisterAction();
                 break;
             case 'login':
-                handleLoginAction();
+                \functions\handleLoginAction();
                 break;
             case 'dashboard':
                 include_once 'templates/dashboard.php';
                 break;
             case 'update':
-                handleUpdateAction();
+                \functions\handleUpdateAction();
                 break;
             case 'close':
-                handleCloseAction();
+                \functions\handleCloseAction();
                 break;
             case 'logout':
-                handleLogoutAction();
+                \functions\handleLogoutAction();
                 break;
             default:
                 include_once 'templates/home.php';
