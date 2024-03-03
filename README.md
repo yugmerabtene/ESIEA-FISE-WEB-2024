@@ -51,7 +51,7 @@
 
 **Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (10 points)**
 1. TP-01: Développement d'une application de gestion d'utilisateurs en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module-04) (**6 points**)
-2. TP-02: Poursuite du développement du module-07 TP-01 en intégrant des API : DAN, METEO (https://api.gouv.fr/) (**2 points**)
+2. TP-02: Poursuite du développement du module-07 TP-01 en intégrant des API : DAN (https://api.gouv.fr/) (**2 points**)
 3. TD-03 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**2 points**)
 
 ---
@@ -64,7 +64,7 @@
 
 **Module-08: Développement Front-End avec React.js (10 points)**
 1. TP-01: Introduction à React.js (**2.5 points**)
-2. TP-02: Création d'une application React.js avec intégration d'une API (https://api.gouv.fr/) (**5 points**)
+2. TP-02: Création d'une application React.js avec intégration de l'API METEO (**5 points**)
 3. QCM React.js (10 questions, chaque question notée sur 0.25) (**2.5 points**)
 
 ---
