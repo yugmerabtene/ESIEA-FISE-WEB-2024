@@ -1,5 +1,7 @@
-1. ****
-1. **Cas d'utilisation principal : Se Connecter et Accéder au Tableau de Bord**
+1. ***USECASE***
+   ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/69bf9c89-3642-4949-a0cd-19ddcde26f4e)
+
+a. **Cas d'utilisation principal : Se Connecter et Accéder au Tableau de Bord**
    - **Acteurs :** Utilisateur
    - **Description :** L'utilisateur se connecte avec succès et est redirigé vers son tableau de bord.
    - **Scénario Principal :**
@@ -7,14 +9,14 @@
      2. Le système vérifie les informations d'identification.
      3. Si la connexion réussit, l'utilisateur est redirigé vers son tableau de bord.
 
-2. **Cas d'utilisation inclus : Visualiser le Tableau de Bord**
+b. **Cas d'utilisation inclus : Visualiser le Tableau de Bord**
    - **Acteurs :** Utilisateur
    - **Description :** L'utilisateur visualise les informations présentées sur son tableau de bord.
    - **Scénario Principal :**
      1. L'utilisateur est connecté.
      2. Le système affiche les informations pertinentes sur le tableau de bord.
 
-3. **Cas d'utilisation étendu : Modifier le Profil depuis le Tableau de Bord**
+c. **Cas d'utilisation étendu : Modifier le Profil depuis le Tableau de Bord**
    - **Acteurs :** Utilisateur
    - **Description :** L'utilisateur a la possibilité de modifier son profil directement depuis le tableau de bord.
    - **Scénario Principal :**
