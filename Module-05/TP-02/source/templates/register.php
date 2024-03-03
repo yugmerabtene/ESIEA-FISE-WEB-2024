@@ -8,7 +8,7 @@
 
                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <?php else : ?>
-                <?php $_SESSION['csrf_token'] = functions/generateCsrfToken(); ?>
+                <?php $_SESSION['csrf_token'] = functions\generateCsrfToken(); ?>
                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
             <?php endif; ?>
