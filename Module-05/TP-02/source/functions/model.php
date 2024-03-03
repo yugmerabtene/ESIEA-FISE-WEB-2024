@@ -34,7 +34,7 @@ function registerUser($nom, $prenom, $adresse, $email, $password, $confirmPasswo
     }
 }
 
-function loginUser($email, $password) {
+function LoginUser($email, $password) {
     global $pdo;
 
     try {
