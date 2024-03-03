@@ -18,4 +18,5 @@ function generateCsrfToken() {
     return $_SESSION['csrf_token'];
 }
 
+
 ?>
