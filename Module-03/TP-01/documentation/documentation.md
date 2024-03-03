@@ -41,4 +41,4 @@ La charte graphique du portfolio est définie comme suit :
 - **Police :** UneTypoGoogleDeVotreChoix.
 
 **5. Wireframe:**
-La maquettage du portfolio est définie comme suit :
+Le maquettage du portfolio est définie comme suit :
