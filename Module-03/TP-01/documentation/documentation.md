@@ -41,7 +41,7 @@ La charte graphique du portfolio est définie comme suit :
 - ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/3fe06968-850d-4280-8b75-04857ec26ca5)
 
 
-- **Police :** Roboto.
+- **Police :** Roboto. https://fonts.google.com/specimen/Roboto
 
 **5. Wireframe:**
 Le maquettage du portfolio est définie comme suit :
