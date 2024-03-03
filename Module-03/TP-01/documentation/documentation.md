@@ -23,15 +23,15 @@ L'organisation des pages sera pensée de manière logique et intuitive,
 assurant une navigation facile pour les utilisateurs.  
 L'arborescence comprendra les sections suivantes :
 
-|-- Accueil (Présentation personnelle)
+|-- Accueil (Présentation personnelle)  
 |  
-|-- Projets (Liste des projets réalisés)
+|-- Projets (Liste des projets réalisés)  
 |
-|-- S'enregistrer (Formulaire d'inscription)
+|-- S'enregistrer (Formulaire d'inscription)  
 |  
-|-- Se connecter (Formulaire de connexion) 
+|-- Se connecter (Formulaire de connexion)   
 |
-|-- Formulaire de contact (non fonctionnel en local à part si on passe par les serveurs de google)
+|-- Formulaire de contact (non fonctionnel en local à part si on passe par les serveurs de google)  
 
 ---
 
