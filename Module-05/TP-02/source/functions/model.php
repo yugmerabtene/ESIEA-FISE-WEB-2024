@@ -1,15 +1,13 @@
 <?php
-
-include_once 'service.php';
 include_once 'security.php';
-
+include_once 'service.php';
 $pdo = new PDO('mysql:host=localhost;dbname=siea_web', 'root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 function registerUser($nom, $prenom, $adresse, $email, $password, $confirmPassword) {
     global $pdo;
     // Vérifier le jeton CSRF
-    \functions\verifyCsrfToken();
+    verifyCsrfToken();
     try {
         // Vérifier si l'email existe déjà (Prévention d'injection SQL)
         $stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
@@ -75,22 +73,22 @@ function getUserInfos($id) {
 }
 
 
-function closeAccount($id) {
-    global $pdo;
+// function closeAccount($id) {
+//     global $pdo;
 
-    try {
-        // Supprimer le compte de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
-        $stmt = $pdo->prepare("DELETE FROM utilisateurs WHERE id = ?");
-        $stmt->execute([$id]);
+//     try {
+//         // Supprimer le compte de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
+//         $stmt = $pdo->prepare("DELETE FROM utilisateurs WHERE id = ?");
+//         $stmt->execute([$id]);
 
-        // Déconnecter l'utilisateur et rediriger vers la page d'accueil
-        session_destroy();
-        header("Location: index.php");
-        exit();
-    } catch (PDOException $e) {
-        echo "Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage();
-    }
-}
+//         // Déconnecter l'utilisateur et rediriger vers la page d'accueil
+//         session_destroy();
+//         header("Location: index.php");
+//         exit();
+//     } catch (PDOException $e) {
+//         echo "Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage();
+//     }
+// }
 
 
 

@@ -1,8 +1,8 @@
 <?php
 /** Controller */
-include_once 'service.php';
-include_once 'security.php';
 include_once 'model.php';
+include_once 'security.php';
+include_once 'service.php';
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -21,27 +21,27 @@ function controller() {
         $action = $_GET['action'];        
         // Protection CSRF pour toutes les actions POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            \functions\verifyCsrfToken();
+            verifyCsrfToken();
         }
 
         switch ($action) {
             case 'register':
-                \functions\handleRegisterAction();
+                handleRegisterAction();
                 break;
             case 'login':
-                \functions\handleLoginAction();
+                handleLoginAction();
                 break;
             case 'dashboard':
                 include_once 'templates/dashboard.php';
                 break;
-            case 'update':
-                \functions\handleUpdateAction();
-                break;
-            case 'close':
-                \functions\handleCloseAction();
-                break;
+            // case 'update':
+            //     handleUpdateAction();
+            //     break;
+            // case 'close':
+            //     handleCloseAction();
+            //     break;
             case 'logout':
-                \functions\handleLogoutAction();
+                handleLogoutAction();
                 break;
             default:
                 include_once 'templates/home.php';

@@ -1,5 +1,6 @@
 <!-- login.php -->
-<?php include_once 'parts/header.php'; ?>
+<?php 
+include_once 'parts/header.php'; ?>
 <main>
     <section>
         <h1>Connexion</h1>

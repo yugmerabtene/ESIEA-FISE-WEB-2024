@@ -1,6 +1,6 @@
 <?php
+include_once 'functions/controller.php';
 include 'templates/parts/header.php';
-include 'functions/controller.php';
-Controller(); 
+controller(); 
 include 'templates/parts/footer.php';
 ?>

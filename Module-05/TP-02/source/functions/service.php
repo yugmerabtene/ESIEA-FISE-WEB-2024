@@ -1,6 +1,4 @@
 <?php
-namespace functions;
-
 /**
  * Contrôleur principal qui gère les différentes actions
  */
@@ -43,7 +41,7 @@ function validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $c
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF
-        \functions\verifyCsrfToken();
+        verifyCsrfToken();
 
         // Récupérer les données du formulaire
         $nom = sanitizeInput($_POST['nom']);
@@ -85,7 +83,7 @@ function handleRegisterAction() {
 function handleLoginAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF ici avant d'appeler loginUser
-        \functions\verifyCsrfToken();
+        verifyCsrfToken();
 
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $password = $_POST['password'];
@@ -96,7 +94,7 @@ function handleLoginAction() {
     }
 }
 
-function handleUpdateAction() {
+/* function handleUpdateAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $id = $_SESSION['user_id'];
         $nom = sanitizeInput($_POST['nom']);
@@ -109,25 +107,25 @@ function handleUpdateAction() {
 
         updateUserInfo($id, $nom, $prenom, $email, $password);
     }
-}
+} */
 
-function handleCloseAction() {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $id = $_SESSION['user_id'];
+// function handleCloseAction() {
+//     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//         $id = $_SESSION['user_id'];
 
-        // Vérifier le jeton CSRF avant de fermer le compte
-        \functions\verifyCsrfToken();
+//         // Vérifier le jeton CSRF avant de fermer le compte
+//         verifyCsrfToken();
 
-        closeAccount($id);
+//         closeAccount($id);
 
-        // Détruire la session
-        session_destroy();
+//         // Détruire la session
+//         session_destroy();
 
-        // Rediriger vers la page d'accueil
-        header("Location: index.php");
-        exit();
-    }
-}
+//         // Rediriger vers la page d'accueil
+//         header("Location: index.php");
+//         exit();
+//     }
+// }
 
 function handleLogoutAction() {
     // Détruire la session
