@@ -38,7 +38,7 @@ a. diagramme d'activité du système dans le cas d'un utilisateur déja enregist
 
 ***3.Diagramme de séquence***  
 
-**4.Diagramme de flux du système***
+***4.Diagramme de flux du système***
 ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/bc2c4626-aafd-4bdb-b570-154f4ac6ec87)
 
 
