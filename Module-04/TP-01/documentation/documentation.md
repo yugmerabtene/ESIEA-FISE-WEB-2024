@@ -35,11 +35,12 @@ c. **Cas d'utilisation étendu : Modifier le Profil depuis le Tableau de Bord**
 ***2.Diagramme d'activité***  
 a. diagramme d'activité du système dans le cas d'un utilisateur déja enregistré.  
 ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/4c00f24f-c965-4ba6-b8ce-1e048217707a)
-
 ***3.Diagramme de séquence***  
-
+TO DO    
 ***4.Diagramme de flux du système***
 ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/bc2c4626-aafd-4bdb-b570-154f4ac6ec87)
+***5.ERD (Entity Relational Diagram)**
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/b1e872d5-bb0d-4535-9879-966a88c0ea0c)
 
 
 
