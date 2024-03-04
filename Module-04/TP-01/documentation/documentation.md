@@ -41,7 +41,8 @@ TO DO
 ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/bc2c4626-aafd-4bdb-b570-154f4ac6ec87)  
   
 ***5.ERD (Entity Relational Diagram)***  
-![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/41ebcd8e-6ca5-465f-8633-a354260b5ce7)
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/8f382a76-da86-4098-b9ac-d8a67662a633)
+
 
 
 
