@@ -34,7 +34,8 @@ c. **Cas d'utilisation étendu : Modifier le Profil depuis le Tableau de Bord**
 
 ***2.Diagramme d'activité***  
 a. diagramme d'activité d'un utilisateur déja enregistré.  
-![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/4ea679de-4a63-44a3-a206-749cf788e666)  
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/4c00f24f-c965-4ba6-b8ce-1e048217707a)
+
 
 ***3.Diagramme de séquence***  
 
