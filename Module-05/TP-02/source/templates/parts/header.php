@@ -30,6 +30,7 @@
                     } else {
                         // Si l'utilisateur est connecté, afficher les liens du tableau de bord et de déconnexion
                         echo '<li><a href="index.php?action=dashboard">Tableau de bord</a></li>';
+                        echo '<li><a href="index.php?action=update">Modifier mes informations</a></li>';
                         echo '<li><a href="index.php?action=logout">Déconnexion</a></li>';
                     }
                 ?>

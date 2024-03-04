@@ -30,6 +30,7 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
+    min-height: 50%;
 }
 
 form {
@@ -53,12 +54,17 @@ button {
     cursor: pointer;
 }
 
+.close-button{
+    background-color: rgb(141, 14, 14);
+    width: 180px;
+    margin-top: 5%;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 10px; 
     bottom: 0;
     width: 100%;
 }

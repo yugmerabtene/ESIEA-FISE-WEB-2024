@@ -1,16 +1,17 @@
 <?php
 /** Controller */
-include_once 'model.php';
+require_once 'model.php';
 include_once 'security.php';
 include_once 'service.php';
 
 if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+    session_start();    
 }
 /**
  * Contrôleur principal qui gère les différentes actions
  */
 function controller() {
+    try{
     // Démarrer la session (si elle n'est pas déjà active)
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
@@ -21,7 +22,7 @@ function controller() {
         $action = $_GET['action'];        
         // Protection CSRF pour toutes les actions POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            verifyCsrfToken();
+            functions\verifyCsrfToken();
         }
 
         switch ($action) {
@@ -34,12 +35,12 @@ function controller() {
             case 'dashboard':
                 include_once 'templates/dashboard.php';
                 break;
-            // case 'update':
-            //     handleUpdateAction();
-            //     break;
-            // case 'close':
-            //     handleCloseAction();
-            //     break;
+            case 'update':
+                handleUpdateAction();
+                break;
+            case 'close':
+                handleCloseAction();
+                break;
             case 'logout':
                 handleLogoutAction();
                 break;
@@ -50,6 +51,10 @@ function controller() {
     } else {
         include_once 'templates/home.php';
     }
+}catch(Exception $e){
+    $error_message = $e->getMessage();
+    require_once 'templates/error.php';
+}
 }
 
 
