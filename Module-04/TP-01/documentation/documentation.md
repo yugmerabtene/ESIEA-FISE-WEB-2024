@@ -1,7 +1,7 @@
 1. ***USECASE***  
    ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/69bf9c89-3642-4949-a0cd-19ddcde26f4e)  
 
-
+**Explications :**
 a. **Cas d'utilisation principal : Se Connecter, S'enregistrer et Accéder au Tableau de Bord**
    - **Acteurs :** Utilisateur
    - **Description :** L'utilisateur a la possibilité de se connecter après s'enregistrer avec succès et est redirigé vers son tableau de bord.
