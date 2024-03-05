@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation du DOM avec JavaScript</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Bienvenue !</h1>
+        <p id="message">Cliquez sur le bouton pour changer le message.</p>
+        <button id="changeMessageBtn">Changer le message</button>
+    </div>
+
+    <script>
+        // Fonction qui sera appelée lorsque le bouton est cliqué
+        function changerMessage() {
+            // Sélectionne l'élément par son ID
+            var messageElement = document.getElementById("message");
+
+            // Change le texte de l'élément
+            messageElement.textContent = "Nouveau message !";
+        }
+
+       
+    </script>
+
+</body>
+</html>
