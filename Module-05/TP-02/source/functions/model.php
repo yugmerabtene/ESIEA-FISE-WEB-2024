@@ -1,13 +1,23 @@
 <?php
 include_once 'security.php';
 include_once 'service.php';
-$pdo = new PDO('mysql:host=localhost;dbname=siea_web', 'root', '');
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+function dbConnect(){
+    try{
+        $pdo = new PDO('mysql:host=localhost;dbname=esiea_web', 'root', '');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
+    }catch(Exception $e){
+        throw new Exception('Erreur lors de la connexion à la base de données : ' . $e->getMessage());
+    }
+}   
 
 function registerUser($nom, $prenom, $adresse, $email, $password, $confirmPassword) {
-    global $pdo;
+    $pdo = dbConnect();
+    //role 0 = admin, 1 = modérateur, 2 = utilisateur
+    $defaultRole = 2; 
     // Vérifier le jeton CSRF
-    verifyCsrfToken();
+    functions\verifyCsrfToken();
     try {
         // Vérifier si l'email existe déjà (Prévention d'injection SQL)
         $stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
@@ -23,17 +33,17 @@ function registerUser($nom, $prenom, $adresse, $email, $password, $confirmPasswo
         } else {
             // Enregistrement réussi
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, prenom, adresse, email, password) VALUES (?, ?, ?, ?, ?)");
-            $stmt->execute([$nom, $prenom, $adresse, $email, $hashedPassword]);
+            $stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, prenom, adresse, email, password, role) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt->execute([$nom, $prenom, $adresse, $email, $hashedPassword, $defaultRole]);
             return true;
         }
     } catch (PDOException $e) {
-        return "Erreur lors de l'enregistrement de l'utilisateur : " . $e->getMessage();
+        throw new Exception("Erreur lors de l'enregistrement de l'utilisateur : " . $e->getMessage());
     }
 }
 
 function loginUser($email, $password) {
-    global $pdo;
+    $pdo = dbConnect();
 
     try {
         // Récupérer les informations de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
@@ -53,12 +63,12 @@ function loginUser($email, $password) {
             echo "Email ou mot de passe incorrect.";
         }
     } catch (PDOException $e) {
-        echo "Erreur lors de la connexion de l'utilisateur : " . $e->getMessage();
+        throw new Exception("Erreur lors de la connexion de l'utilisateur : " . $e->getMessage());
     }
 }
 
 function getUserInfos($id) {
-    global $pdo;
+    $pdo = dbConnect();
 
     try {
         // Récupérer les informations de l'utilisateur par son ID (Requête préparée pour prévenir l'injection SQL)
@@ -68,27 +78,51 @@ function getUserInfos($id) {
 
         return $userInfo;
     } catch (PDOException $e) {
-        echo "Erreur lors de la récupération des informations de l'utilisateur : " . $e->getMessage();
+        throw new Exception("Erreur lors de la récupération des informations de l'utilisateur : " . $e->getMessage());
     }
 }
 
+function updateUserInfo($id, $nom, $prenom, $adresse, $email, $password, $confirmPassword){
+    $pdo = dbConnect();
+    // Vérifier le jeton CSRF
+    functions\verifyCsrfToken();
 
-// function closeAccount($id) {
-//     global $pdo;
+    if ($password !== $confirmPassword) {
+        return "password_mismatch";
+    } else {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    try {
+            $stmt = $pdo->prepare("UPDATE utilisateurs SET nom = ?, prenom = ?, adresse = ?, email = ?, password = ? WHERE id = ?");
+            $stmt->execute([$nom, $prenom, $adresse, $email, $hashedPassword, $id]);
+            return true;
 
-//     try {
-//         // Supprimer le compte de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
-//         $stmt = $pdo->prepare("DELETE FROM utilisateurs WHERE id = ?");
-//         $stmt->execute([$id]);
+    } catch (PDOException $e) {
+        throw new Exception("Erreur lors de la modification des informations de l'utilisateur : " . $e->getMessage());
+    }
+    }
+}
 
-//         // Déconnecter l'utilisateur et rediriger vers la page d'accueil
-//         session_destroy();
-//         header("Location: index.php");
-//         exit();
-//     } catch (PDOException $e) {
-//         echo "Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage();
-//     }
-// }
+function closeAccount($id) {
+    global $pdo; 
+
+    try {
+        $pdo = dbConnect();
+
+        if (!$pdo) {
+            throw new Exception('Database connection failed.');
+        }
+        // Supprimer le compte de l'utilisateur (Requête préparée pour prévenir l'injection SQL)
+        $stmt = $pdo->prepare("DELETE FROM utilisateurs WHERE id = ?");
+        $stmt->execute([$id]);
+        
+        // Déconnecter l'utilisateur et rediriger vers la page d'accueil
+        session_destroy();
+        header("Location: index.php");
+        exit();
+    } catch (PDOException $e) {
+        throw new Exception("Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage());
+    }
+}
 
 
 

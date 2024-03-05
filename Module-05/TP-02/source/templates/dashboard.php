@@ -23,6 +23,11 @@ include_once 'templates/parts/header.php';
             echo "Adresse: " . $userInfo['adresse'];
             echo "Email: " . $userInfo['email'];
         ?>
+        <!--Supprimer le compte -->
+        <form action="index.php?action=close" method="post">
+            <input type="hidden" name="csrf_token" value="<?= functions\sanitizeInput($_SESSION['csrf_token']); ?>">
+            <button class="close-button" type="submit" name="delete_user">Supprimer mon compte</button>
+        </form>
     </section>
 </main>
 

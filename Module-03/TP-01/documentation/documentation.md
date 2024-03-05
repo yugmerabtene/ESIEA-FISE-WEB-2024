@@ -37,8 +37,22 @@ L'arborescence comprendra les sections suivantes :
 
 **4. Charte Graphique:**
 La charte graphique du portfolio est définie comme suit :
-- **Couleurs :** Utilisation des couleurs #XXXXXX, #YYYYYY
-- **Police :** UneTypoGoogleDeVotreChoix.
+- **Couleurs :** Utilisation des couleurs : #ededed, #333333, #d49625
+- ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/3fe06968-850d-4280-8b75-04857ec26ca5)
+
+
+- **Police :** Roboto. https://fonts.google.com/specimen/Roboto
 
 **5. Wireframe:**
 Le maquettage du portfolio est définie comme suit :
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/17bdcffb-0dd9-4c62-911c-ecd52e2afea9)  
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/a8048e7a-faec-4a9c-826f-60e6890592a0)  
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/3d66aa02-5852-4acb-9ab9-70123290d960)  
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/fcfd72f1-4fe8-4acf-81b3-74f1631a6598)  
+![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/6ca76363-00e6-491b-bd1e-21f150963c4b)  
+
+
+
+
+
+

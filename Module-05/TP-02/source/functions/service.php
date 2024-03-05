@@ -1,58 +1,21 @@
 <?php
-/**
- * Contrôleur principal qui gère les différentes actions
- */
-// REGEX
-function validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $confirmPassword) {
-    $errors = [];
-
-    // Validation du nom et prénom (autorise uniquement les lettres et les espaces)
-    if (!preg_match("/^[a-zA-Z\sàáâãäåèéêëìíîïòóôõöùúûüýÿç']+$/", $nom)) {
-        $errors['nom'] = "Le nom n'est pas valide.";
-    }
-
-    if (!preg_match("/^[a-zA-Z\sàáâãäåèéêëìíîïòóôõöùúûüýÿç']+$/", $prenom)) {
-        $errors['prenom'] = "Le prénom n'est pas valide.";
-    }
-
-    // Validation de l'adresse (autorise les lettres, les chiffres, les espaces et les caractères spéciaux courants)
-    if (!preg_match("/^[a-zA-Z0-9\sàáâãäåèéêëìíîïòóôõöùúûüýÿç'-.,]+$/", $adresse)) {
-        $errors['adresse'] = "L'adresse n'est pas valide.";
-    }
-
-    // Validation de l'email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = "L'adresse email n'est pas valide.";
-    }
-
-    // Validation du mot de passe
-    if (strlen($password) < 8 || !preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) {
-        $errors['password'] = "Le mot de passe doit avoir au moins 8 caractères, une majuscule et un chiffre.";
-    }
-
-    // Validation de la confirmation du mot de passe
-    if ($password !== $confirmPassword) {
-        $errors['confirm_password'] = "Les mots de passe ne correspondent pas.";
-    }
-
-    return $errors;
-}
+include_once 'security.php';
 
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF
-        verifyCsrfToken();
+        functions\verifyCsrfToken();
 
         // Récupérer les données du formulaire
-        $nom = sanitizeInput($_POST['nom']);
-        $prenom = sanitizeInput($_POST['prenom']);
-        $adresse = sanitizeInput($_POST['adresse']);
+        $nom = functions\sanitizeInput($_POST['nom']);
+        $prenom = functions\sanitizeInput($_POST['prenom']);
+        $adresse = functions\sanitizeInput($_POST['adresse']);
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirm_password'];
 
         // Valider le formulaire
-        $errors = validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $confirmPassword);
+        $errors = functions\validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $confirmPassword);
 
         // Si des erreurs sont présentes, afficher le formulaire avec les erreurs
         if (!empty($errors)) {
@@ -83,7 +46,7 @@ function handleRegisterAction() {
 function handleLoginAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Vérifier le jeton CSRF ici avant d'appeler loginUser
-        verifyCsrfToken();
+        functions\verifyCsrfToken();
 
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $password = $_POST['password'];
@@ -94,38 +57,56 @@ function handleLoginAction() {
     }
 }
 
-/* function handleUpdateAction() {
+function handleUpdateAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $id = $_SESSION['user_id'];
-        $nom = sanitizeInput($_POST['nom']);
-        $prenom = sanitizeInput($_POST['prenom']);
-        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        // Vérifier le jeton CSRF avant d'appeler updateUserInfo
         \functions\verifyCsrfToken();
 
-        updateUserInfo($id, $nom, $prenom, $email, $password);
+        $id = $_SESSION['user_id'];
+        $nom = functions\sanitizeInput($_POST['nom']);
+        $prenom = functions\sanitizeInput($_POST['prenom']);
+        $adresse = functions\sanitizeInput($_POST['adresse']);
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $password = $_POST['password'];
+        $confirmPassword = $_POST['confirm_password'];
+
+        $errors = functions\validateRegistrationForm($nom, $prenom, $adresse, $email, $password, $confirmPassword);
+
+        if (!empty($errors)) {
+            $data['errors'] = $errors;
+            include_once 'templates/update.php';
+        } else {
+
+            $error = updateUserInfo($id, $nom, $prenom,$adresse, $email, $password, $confirmPassword);
+
+            if ($error === true) {
+                header("Location: index.php?action=dashboard");
+                exit();
+            } else {
+                $data['error'] = $error;
+                include_once 'templates/update.php';
+            }
+        }
+
+    } else {
+        include_once 'templates/update.php';
     }
-} */
+}
 
-// function handleCloseAction() {
-//     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//         $id = $_SESSION['user_id'];
+function handleCloseAction() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id = $_SESSION['user_id'];
 
-//         // Vérifier le jeton CSRF avant de fermer le compte
-//         verifyCsrfToken();
+        functions\verifyCsrfToken();
 
-//         closeAccount($id);
+        closeAccount($id);
 
-//         // Détruire la session
-//         session_destroy();
+        session_destroy();
 
-//         // Rediriger vers la page d'accueil
-//         header("Location: index.php");
-//         exit();
-//     }
-// }
+        header("Location: index.php");
+        exit();
+    }
+}
 
 function handleLogoutAction() {
     // Détruire la session
