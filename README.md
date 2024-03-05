@@ -43,8 +43,7 @@ Refaire la meme structure des repo dans vos rendu pour avoir un suivi complet du
 ---
 
 **Module-06: JavaScript et Librairie jQuery (10 points)**
-1. TP-01: JavaScript Vanilla et DOM, intégration dans le TP-02 du module-05 (**2.5 points**)
-2. TP-02: jQuery et intégration dans le TP-02 du module-05 (**2.5 points**)
+1. TP-01: JavaScript Vanilla, DOM, jQuery, Api DAN, intégration dans le TP-02 du module-05 (**5 points**)
 3. QCM JavaScript et jQuery (10 questions, chaque question notée sur 0.50 (**5 points**)
 
 ---
