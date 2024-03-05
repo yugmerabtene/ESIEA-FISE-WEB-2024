@@ -1,5 +1,8 @@
 **Programme d'Évaluation:**
-Refaire la meme structure des repo dans vos rendus "pour avoir un suivi complet du travail de chaqu'un"
+Refaire la meme structure des repo dans vos rendus  
+Ex: /Module-05  
+      /source  
+      readme.md  
 ---
 
 **Module-01: Fondamentaux du Web (10 points)**
