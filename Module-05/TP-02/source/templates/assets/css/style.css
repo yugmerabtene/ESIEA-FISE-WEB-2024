@@ -3,6 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 header {
@@ -30,7 +31,6 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    min-height: 50%;
 }
 
 form {

@@ -1,5 +1,4 @@
 <?php
-include_once 'security.php';
 
 function handleRegisterAction() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -51,7 +50,14 @@ function handleLoginAction() {
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $password = $_POST['password'];
 
-        loginUser($email, $password);
+        $error = loginUser($email, $password);
+
+        if($error === true){
+            header("Location: index.php?action=dashboard");
+            exit();
+        } else {
+            include_once 'templates/login.php';
+        }
     } else {
         include_once 'templates/login.php';
     }
@@ -83,7 +89,6 @@ function handleUpdateAction() {
                 header("Location: index.php?action=dashboard");
                 exit();
             } else {
-                $data['error'] = $error;
                 include_once 'templates/update.php';
             }
         }

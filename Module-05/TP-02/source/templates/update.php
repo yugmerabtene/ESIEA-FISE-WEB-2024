@@ -47,8 +47,6 @@
                 echo "<p class='error-message'>Cet email est déjà enregistré. Choisissez un autre email.</p>";
             } elseif (isset($error) && $error === 'password_mismatch') {
                 echo "<p class='error-message'>Les mots de passe ne correspondent pas.</p>";
-            }elseif (isset($error) && $error === "Erreur lors de la modification des informations de l'utilisateur") {
-                echo "<p class='error-message'>Erreur lors de l'enregistrement des nouvelles informations de l'utilisateur. Veuillez réessayer.</p>";
             }
             ?>
             <button type="submit">Envoyer</button>

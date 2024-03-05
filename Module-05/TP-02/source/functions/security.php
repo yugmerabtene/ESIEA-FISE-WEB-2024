@@ -9,7 +9,7 @@ function sanitizeInput($input) {
 
 function verifyCsrfToken() {
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-        die("Erreur CSRF token. Les jetons ne correspondent pas. " . json_encode($_POST));
+        throw new \Exception("Erreur CSRF token. Les jetons ne correspondent pas. ");                 //. json_encode($_POST)
     }
 }
 
