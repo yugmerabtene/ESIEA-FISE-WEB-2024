@@ -1,9 +1,9 @@
 **Programme d'Évaluation:**
-
+Refaire la meme structure des repo dans vos rendu pour avoir un suivi complet du travail de chaqu'un
 ---
 
 **Module-01: Fondamentaux du Web (10 points)**
-1. TP-01: HTML5, CSS3, Flexbox : réalisation d'un site onePage responsive (**10 point**)
+1. TP-01: HTML5, CSS3, Grid, Flexbox : réalisation d'un site onePage responsive (**10 point**)
 3. QCM HTML (20 questions, chaque question notée sur 0.50) (**10 points**)
 
 ---
