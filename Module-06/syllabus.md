@@ -18,7 +18,7 @@
    ```
 
 #### 1.3 Manipulation du contenu avec JavaScript
-   - Modification du texte et du HTML d'un élément.
+   - Modification du texte et de l'HTML d'un élément.
    - Ajout et suppression d'éléments.
 
    ```javascript
