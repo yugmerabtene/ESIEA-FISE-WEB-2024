@@ -1,4 +1,4 @@
-## Syllabus JavaScript DOM et jQuery avec l'API BAN
+## Syllabus JavaScript DOM et jQuery avec AJAX et Requêtes Asynchrones
 
 ### Module 1: Introduction au DOM
 
@@ -113,7 +113,7 @@
    - Créez un bouton qui affiche une alerte lorsqu'il est cliqué avec JavaScript, puis faites de même avec jQuery.
    - Validez un formulaire en utilisant JavaScript, puis faites de même avec jQuery.
 
-### Module 3: Manipulation du style et des classes
+### Module 3: Manipulation du style, des classes, fonctions et callbacks
 
 #### 3.1 Modification du style
    - Changement de propriétés CSS.
@@ -138,19 +138,41 @@
    elementById.classList.toggle('toggleClasse');
    ```
 
-#### 3.3 Modification du style et des classes avec jQuery
-   - Changement de propriétés CSS.
-   - Ajout et suppression de classes.
+#### 3.3 Fonctions en JavaScript
+   - Définition de fonctions.
+   - Passage de paramètres.
+   - Retour de valeurs.
 
    ```javascript
-   // jQuery
-   elementById.css('color', 'red');
-   elementById.addClass('animate');
+   // JavaScript
+   function additionner(a, b) {
+       return a + b;
+   }
+
+   let resultat = additionner(3, 4);
+   ```
+
+#### 3.4 Callbacks en JavaScript
+   - Utilisation de fonctions de rappel.
+   - Gestion asynchrone avec des callbacks.
+
+   ```javascript
+   // JavaScript
+   function effectuerCalcul(a, b, callback) {
+       let resultat = a + b;
+       callback(resultat);
+   }
+
+   function afficherResultat(resultat) {
+       console.log('Le résultat est :', resultat);
+   }
+
+   effectuerCalcul(5, 7, afficherResultat);
    ```
 
 #### Exercices
-   - Animez un élément lorsqu'un bouton est cliqué avec JavaScript, puis faites de même avec jQuery.
-   - Changez la couleur d'un élément en utilisant des classes avec JavaScript, puis faites de même avec jQuery.
+   - Créez une fonction en JavaScript qui prend deux paramètres et les multiplie, puis affichez le résultat.
+   - Utilisez une fonction de rappel pour effectuer une opération asynchrone (simulée) en JavaScript.
 
 ### Module 4: Traverser et manipuler la structure
 
@@ -182,7 +204,9 @@
    // jQuery
    let parentElement = elementById.parent();
    let childElements = elementById.children();
-   let nextSibling = elementById.next();
+  
+
+ let nextSibling = elementById.next();
    ```
 
 #### 4.4 Manipulation de l'arbre DOM avec jQuery
@@ -195,12 +219,46 @@
    elementById.remove();
    ```
 
-#### Exercice intégré : Intégration de l'API BAN dans un input adresse
+### Module 5: AJAX et Requêtes Asynchrones
+
+#### 5.1 AJAX avec JavaScript
+   - Utilisation de l'objet `XMLHttpRequest` pour effectuer des requêtes asynchrones.
+
+   ```javascript
+   // JavaScript
+   const xhr = new XMLHttpRequest();
+   xhr.open('GET', 'https://api.example.com/data', true);
+   xhr.onreadystatechange = function() {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+           const responseData = JSON.parse(xhr.responseText);
+           // Traitez les données de la réponse ici
+       }
+   };
+   xhr.send();
+   ```
+
+#### 5.2 AJAX avec jQuery
+   - Utilisation de la fonction `$.ajax()` pour effectuer des requêtes asynchrones avec jQuery.
+
+   ```javascript
+   // jQuery
+   $.ajax({
+       url: 'https://api.example.com/data',
+       method: 'GET',
+       dataType: 'json',
+       success: function(data) {
+           // Traitez les données de la réponse ici
+       },
+       error: function(error) {
+           console.error('Erreur lors de la requête AJAX:', error);
+       }
+   });
+   ```
+
+#### Exercice intégré : Utilisation de l'API BAN avec AJAX
 
 ##### Objectif
-   - Créer une interface utilisateur qui, lorsqu'un utilisateur saisit une adresse dans un champ de texte, utilise l'API BAN pour récupérer des suggestions d'ad
-
-resses et les affiche à l'utilisateur.
+   - Intégrer l'API BAN pour suggérer des adresses lors de la saisie en utilisant AJAX.
 
 ##### Instructions
 
@@ -214,30 +272,28 @@ resses et les affiche à l'utilisateur.
    <ul id="suggestionsList"></ul>
    ```
 
-2. **Récupération des suggestions avec JavaScript**
-   - Utilisez JavaScript pour détecter les changements dans le champ de texte.
+2. **Récupération des suggestions avec AJAX**
+   - Utilisez AJAX pour détecter les changements dans le champ de texte.
    - À chaque changement, appelez l'API BAN pour obtenir des suggestions d'adresses.
 
    ```javascript
-   // JavaScript
+   // JavaScript avec AJAX
    const adresseInput = document.getElementById('adresseInput');
    const suggestionsList = document.getElementById('suggestionsList');
 
    adresseInput.addEventListener('input', function() {
        const inputValue = adresseInput.value;
 
-       // Utilisez l'API BAN pour récupérer les suggestions en fonction de inputValue
-       // Exemple d'URL de l'API BAN : https://api-adresse.data.gouv.fr/search/?q=${inputValue}
-       // Vous pouvez utiliser fetch() ou une bibliothèque comme axios pour faire la requête.
-
-       // Ensuite, traitez la réponse de l'API et affichez les suggestions.
-       fetch(`https://api-adresse.data.gouv.fr/search/?q=${inputValue}`)
-           .then(response => response.json())
-           .then(data => {
+       const xhr = new XMLHttpRequest();
+       xhr.open('GET', `https://api-adresse.data.gouv.fr/search/?q=${inputValue}`, true);
+       xhr.onreadystatechange = function() {
+           if (xhr.readyState === 4 && xhr.status === 200) {
+               const data = JSON.parse(xhr.responseText);
                const suggestions = data.features;
                afficherSuggestions(suggestions);
-           })
-           .catch(error => console.error('Erreur lors de la récupération des suggestions:', error));
+           }
+       };
+       xhr.send();
    });
 
    function afficherSuggestions(suggestions) {
@@ -251,18 +307,15 @@ resses et les affiche à l'utilisateur.
    }
    ```
 
-3. **Intégration de jQuery (optionnel)**
+3. **Utilisation de jQuery pour AJAX (optionnel)**
    - Si vous préférez utiliser jQuery, vous pouvez également effectuer ces opérations avec jQuery.
 
    ```javascript
-   // jQuery
+   // jQuery avec AJAX
    $(document).ready(function() {
        $('#adresseInput').on('input', function() {
            const inputValue = $(this).val();
 
-           // Utilisez l'API BAN avec $.ajax() pour récupérer les suggestions.
-
-           // Ensuite, traitez la réponse de l'API et affichez les suggestions.
            $.ajax({
                url: `https://api-adresse.data.gouv.fr/search/?q=${inputValue}`,
                method: 'GET',
@@ -279,4 +332,8 @@ resses et les affiche à l'utilisateur.
    });
    ```
 
----
+### Ressources additionnelles
+
+#### Cours W3Schools sur le DOM JavaScript
+   - [W3Schools JavaScript HTML DOM](https://www.w3schools.com/js.asp)
+
