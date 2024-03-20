@@ -1,23 +1,31 @@
-html{
-    background-color: rgba(24, 0, 0, 0.959);
+* {
+    padding: 0;
+    margin: 0;
 }
-header{
-    background-color: rgb(127, 28, 28);
-    justify-content: center;
+html{
+    background-color: #aaa4cc;
+}
+#header, footer{
+    background-color: #000115;
     font-family: serif;
+    color: #fdfcfc;
+    display: flex;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 1rem;
+    min-height: 200px;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .logo{
     height: 300px;
     position: relative;
-}
-
-#header{
-    display: flex;
-    flex-direction: row;
-    align-items:flex-start ;
-    font-size: 100px;
-    font-style: italic;
+    margin-right: 100px;
 }
 
 .logo-container{
@@ -28,7 +36,7 @@ header{
 }
 
 body{
-    background-color: rgb(111, 9, 9);
+    background-color: #aaa4cc;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -89,3 +97,63 @@ h1{
     max-width: 100%; /* Empêche les images de dépasser de leur conteneur */
     height: auto; /* Assure que les images conservent leurs proportions */
 }
+
+/*************************************************/
+
+#playersSection{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    height: auto;
+}
+
+.player {
+    width: 40%;
+    min-height: 100px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin: 25px;
+    background-color: #f5f5f5;
+}
+
+.player .leftpart {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.player .leftpart img {
+    width: 100%;
+}
+
+.player .rightpart {
+    width: 60%;
+    padding-left: 25px;
+}
+
+.player .rightpart div {
+    display: flex;
+    align-items: center;
+}
+
+.player .rightpart div img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.player .rightpart div p {
+    margin: 0;
+}
+
+.player .rightpart button {
+    margin-top: 25px;
+}
+
+.player .rightpart h2 {
+    margin: 0;
+}
+
