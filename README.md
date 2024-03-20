@@ -48,8 +48,8 @@ Ex:
 ---
 
 **Module-06: JavaScript et Librairie jQuery (10 points)**
-1. TP-01: JavaScript Vanilla, DOM, jQuery, Api DAN, intégration dans le TP-02 du module-05 (**5 points**)
-3. QCM JavaScript et jQuery (10 questions, chaque question notée sur 0.50 (**5 points**)
+1. TP-01: JavaScript Vanilla, DOM, jQuery, Api DAN, intégration dans le TP-02 du module-05 (**10 points**)
+
 
 ---
 
@@ -67,16 +67,16 @@ Ex:
 ---
 
 **Module-08: Développement Front-End avec React.js (10 points)**
-1. TP-01: Introduction à React.js (**2.5 points**)
+1. TP-01: Introduction à React.js (**5 points**)
 2. TP-02: Création d'une application React.js avec intégration de l'API METEO (**5 points**)
-3. QCM React.js (10 questions, chaque question notée sur 0.25) (**2.5 points**)
+
 
 ---
 
 **Module-09: Développement Back-End avec Node.js (10 points)**
-1. TP-01: Introduction à Node.js (**2.5 points**)
+1. TP-01: Introduction à Node.js (**5 points**)
 2. TP-02: Intégration du TP-02 du module-08 avec un backend Node.js (**5 points**)
-3. QCM Node.js (10 questions, chaque question notée sur 0.25) (**2.5 points**)
+
 
 ---
 
