@@ -54,9 +54,8 @@ Ex:
 ---
 
 **Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (10 points)**
-1. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module-04) (**6 points**)
-2. TP-02: Poursuite du développement du module-07 TP-01 en intégrant des API : DAN (https://api.gouv.fr/) (**2 points**)
-3. TD-03 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**2 points**)
+1. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module-04) (**9 points**)
+2. TD-02 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**1 points**)
 
 ---
 
