@@ -40,10 +40,10 @@ Ex:
 
 ---
 
-**Module-05: Programmation Web avec PHP Procédurale (15 points)**
+**Module-05: Programmation Web avec PHP Procédurale (10 points)**
 1. TP-01: PHP Procédurale gestion de formulaires et sécurité (**5 points**)
 2. TP-02: PHP Procédurale développement d'un système de gestion d'utilisateurs  (**5 points**)
-3. Examen orale sur le développement web procédural fonctionnel (**5 points**)
+
 
 ---
 
@@ -53,9 +53,10 @@ Ex:
 
 ---
 
-**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (10 points)**
-1. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC / UML (Diagramme de classe plus tous les diagrammes du module-04) (**9 points**)
-2. TD-02 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**1 points**)
+**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (15 points)**
+1. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC  (**5 points**)
+2. UML (Diagramme de classe plus tous les diagrammes du module-04) (**5 points**)
+3. TD-02 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**5 points**)
 
 ---
 
