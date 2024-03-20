@@ -1,62 +1,76 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="Site Web-Designer proposant des informations sur le web design et des tutoriels sur Flexbox.">
-    <meta name="keywords" content="web design, flexbox, design, développement web">
-    <meta name="author" content="Frank Zappa">
-    <title>Web-Designer</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"> <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portefolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">Web-Designer</div>
-        <nav>
-            <ul>
-                <li><i class="fas fa-home"></i> Home</li>
-                <li><i class="fas fa-info-circle"></i> Presentation</li>
-                <li><i class="fas fa-envelope"></i> <a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <aside>
-            <img class="profile-img" src="https://source.unsplash.com/150x150/?frank-zappa" alt="Frank Zappa Profile">
-            <ul class="aside-menu">
-                <li>Nom : Frank</li>
-                <li>Prenom : Zappa</li>
-                <li>Adresse : 88 Rue de Nantes</li>
-                <li>Tel : 07 58 84 51 54</li>
-                <li>Email: frank@example.com</li>
-                <li>Linkedin</li>
-            </ul>
-        </aside>
-        <section>
-            <article>
-                <h1>Autour du web-design</h1>
-                <picture>
-                    <img src="https://source.unsplash.com/600x400/?web-design" alt="Image Web Design">
-                </picture>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis sed quis vel laudantium esse magnam minima nobis, unde eaque provident repudiandae culpa id eum facilis odit debitis sequi temporibus.
-                </p>
-            </article>
-            <article>
-                <h2>FlexBox</h2>
-                <!-- Mettez l'URL de la vidéo YouTube sur Flexbox -->
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VqwPFd-tIaE" frameborder="0" allowfullscreen></iframe>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <ol>
-            <li><i class="fas fa-gavel"></i> CGU</li>
-            <li><i class="fas fa-file-contract"></i> CGV</li>
-            <li><i class="fas fa-info-circle"></i> Mentions Légales</li>
-        </ol>
-    </footer>
+<header>
+    <div id="header">
+        <div class="logo-container">
+            <img src="image/logo.jpg" alt="" class="logo">
+        </div>
+        <p>Battle Cat</p>
+    </div>
+</header>
+
+<div class="slider-container slider-1">
+    <div class="slider">
+        <img src="image/chat1.jpg">
+        <img src="image/chat2.jpg">
+        <img src="image/chat3.jpg">
+        <img src="image/chat4.jpg">
+        <img src="image/chat1.jpg">
+    </div>
+</div>
+
+<div id="playersSection">
+    <div class="player">
+        <div class="leftpart">
+            <img src="./image/chat1.jpg">
+        </div>
+        <div class="rightpart">
+            <h2>Sorcier</h2>
+            <p>Merlin: un chat roux au pelage parsemé d'étoiles dorées, manie les arcanes avec grâce, sa démarche fluide et sa sagesse ancestrale en font un protecteur énigmatique et bienveillant.</p>
+            <button>Choisir ce personnage</button>
+        </div>
+    </div><div class="player">
+        <div class="leftpart">
+            <img src="./image/chat2.jpg">
+        </div>
+        <div class="rightpart">
+            <h2>Voleur</h2>
+            <p>Shadow: un félin agile aux yeux perçants, glisse dans les ombres avec une habileté furtive, ses pattes agiles et sa ruse légendaire en font un maître du vol et de l'infiltration.</p>
+            <button>Choisir ce personnage</button>
+        </div>
+    </div><div class="player">
+        <div class="leftpart">
+            <img src="./image/chat3.jpg">
+        </div>
+        <div class="rightpart">
+            <h2>Paladin</h2>
+            <p>Sir Whiskers: un noble félin au pelage immaculé et au regard déterminé, brandit son épée étincelante avec grâce, sa loyauté inébranlable et son courage inflexible en font un protecteur intrépide des opprimés et un champion de la justice.</p>
+            <button>Choisir ce personnage</button>
+        </div>
+    </div><div class="player">
+        <div class="leftpart">
+            <img src="./image/chat4.jpg">
+        </div>
+        <div class="rightpart">
+            <h2>Nécromancien</h2>
+            <p>Sombra: une féline écaille de tortue aux yeux énigmatiques, manie les ténèbres avec une finesse sinistre, ses griffes tranchantes et son aura lugubre en font une maîtresse des arts sombres, invoquant les morts pour servir ses desseins impénétrables.</p>
+            <button>Choisir ce personnage</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Mentions Légales | RGPD</p>
+</footer>
+
 </body>
 </html>

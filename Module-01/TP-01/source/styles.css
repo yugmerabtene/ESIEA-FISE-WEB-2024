@@ -1,216 +1,159 @@
-:root {
-    --primary-color: #3498db; /* Bleu */
-    --secondary-color: #e74c3c; /* Rouge */
-    --background-color: #ecf0f1; /* Gris clair */
-    --text-color: #333; /* Noir */
-    --font-primary: 'Montserrat', sans-serif; /* Google Fonts - Montserrat */
-    --font-secondary: 'Roboto', sans-serif; /* Google Fonts - Roboto */
-}
-
-body {
-    font-family: var(--font-secondary);
+* {
+    padding: 0;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
-
-header {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 2%;
+html{
+    background-color: #aaa4cc;
+}
+#header, footer{
+    background-color: #000115;
+    font-family: serif;
+    color: #fdfcfc;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 2em;
+    font-size: 6rem;
     font-weight: bold;
-    color: var(--background-color);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20%;
-}
-
-nav li {
-    
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav li:hover {
-    color: var(--secondary-color);
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--background-color);
-}
-
-
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 4%;
-}
-
-aside {
-    flex: 1;
-    max-width: 30%; /* Utilisation de pourcentage pour la largeur */
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 2%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.profile-img {
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.aside-menu {
-    list-style: none;
-    padding: 0;
-}
-
-section {
-    flex: 2;
-    max-width: 65%; /* Utilisation de pourcentage pour la largeur */
-}
-
-article {
-    margin-bottom: 4%;
-    background-color: var(--background-color);
-    padding: 4%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-picture {
-    margin-bottom: 2%;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
-h1, h2 {
-    color: var(--primary-color);
-    font-size: large;
-    font-family: var(--font-primary);
-}
-
-iframe {
-    border: 0;
-    border-radius: 8px;
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 2%;
-    text-align: center;
-    border-top: 2px solid var(--background-color);
-}
-
-footer ol {
-    list-style: none;
-    padding: 0;
-    display: flex;
+    font-size: 1rem;
+    min-height: 200px;
     justify-content: center;
-}
-
-footer li {
-    margin: 0 2%;
     cursor: pointer;
-    font-weight: bold;
-    transition: color 0.3s;
 }
 
-footer li:hover {
-    color: var(--secondary-color);
+.logo{
+    height: 300px;
+    position: relative;
+    margin-right: 100px;
 }
 
-footer i {
-    margin-right: 5px;
+.logo-container{
+    height: 300px;
+    width: auto; 
+    display: block;
+    position: relative;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        margin-top: 2%;
-    }
-
-    nav li {
-        margin: 2% 0;
-    }
-
-    main {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    aside, section {
-        max-width: 100%;
-    }
+body{
+    background-color: #aaa4cc;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Contact Page Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.slider-1{
     max-width: 400px;
-    margin: auto;
+    margin: 100px auto;
+    overflow: hidden;
+    border: 1px solid #000000;
 }
 
-label {
-    margin-top: 10px;
+.slider-1 .slider{
+    display: flex;
+    animation: slider-1 12s infinite ease-in-out;
 }
 
-input,
-textarea {
+.slider-1 p, .slider-1 img{
+    background: #af2a2a;
+    flex-shrink: 0;
     width: 100%;
-    padding: 8px;
-    margin-top: 6px;
-    margin-bottom: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    color: #f1f1f1;
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+@keyframes slider-1{
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+    25%,
+    40% {
+        transform: translateX(-100%);
+    }
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+    75%,
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translate(-400%);
+    }
 }
 
-button:hover {
-    background-color: var(--secondary-color);
+h1{
+    display: flex;
+    height: 300px;
+    width: 100%;
 }
+
+.vignette {
+    display: flex;
+    justify-content: center; 
+}
+
+.im {
+    margin: 5px; /* Marge entre les images */
+    max-width: 100%; /* Empêche les images de dépasser de leur conteneur */
+    height: auto; /* Assure que les images conservent leurs proportions */
+}
+
+/*************************************************/
+
+#playersSection{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    height: auto;
+}
+
+.player {
+    width: 40%;
+    min-height: 100px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin: 25px;
+    background-color: #f5f5f5;
+}
+
+.player .leftpart {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.player .leftpart img {
+    width: 100%;
+}
+
+.player .rightpart {
+    width: 60%;
+    padding-left: 25px;
+}
+
+.player .rightpart div {
+    display: flex;
+    align-items: center;
+}
+
+.player .rightpart div img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.player .rightpart div p {
+    margin: 0;
+}
+
+.player .rightpart button {
+    margin-top: 25px;
+}
+
+.player .rightpart h2 {
+    margin: 0;
+}
+
