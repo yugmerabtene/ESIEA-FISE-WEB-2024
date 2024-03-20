@@ -10,13 +10,12 @@ Ex:
 
 **Module-01: Fondamentaux du Web (10 points)**
 1. TP-01: HTML5, CSS3, Grid, Flexbox : réalisation d'un site onePage responsive (**10 point**)
-3. QCM HTML (20 questions, chaque question notée sur 0.50) (**10 points**)
+
 
 ---
 
 **Module-02: SEO et RGPD (10 points)**
-1. TP-01: Intégration du SEO & RGPD dans le TP-01 du module-01 (**5 points**)
-2. QCM SEO et RGPD (10 questions, chaque question notée sur 0.5) (**5 points**)
+1. TP-01: Intégration du SEO & RGPD dans le TP-01 du module-01 (**10 points**)
 
 ---
 
