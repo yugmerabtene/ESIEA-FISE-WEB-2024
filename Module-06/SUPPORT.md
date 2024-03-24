@@ -1,4 +1,4 @@
-## Syllabus JavaScript DOM et jQuery avec AJAX et Requêtes Asynchrones
+## Cours JavaScript DOM | BOM et jQuery avec AJAX et Requêtes Asynchrones
 
 ### Module 1: Introduction au DOM
 
@@ -204,16 +204,14 @@
    // jQuery
    let parentElement = elementById.parent();
    let childElements = elementById.children();
-  
-
- let nextSibling = elementById.next();
+   let nextSibling = elementById.next();
    ```
 
 #### 4.4 Manipulation de l'arbre DOM avec jQuery
    - Clonage d'éléments.
    - Suppression d'éléments.
 
-   ```javascript
+```javascript
    // jQuery
    let clonedElement = elementById.clone();
    elementById.remove();
@@ -337,3 +335,4 @@
 #### Cours W3Schools sur le DOM JavaScript
    - [W3Schools JavaScript HTML DOM](https://www.w3schools.com/js.asp)
 
+---
