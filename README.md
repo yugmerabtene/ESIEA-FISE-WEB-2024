@@ -52,7 +52,8 @@ Ex:
 ---
 
 **Module-06: JavaScript et Librairie jQuery (10 points)**
-1. TP-01: JavaScript Vanilla, DOM, jQuery, Api DAN, intégration dans le TP-02 du module-05 (**10 points**)
+1. JavaScript Vanilla, DOM, BOM, jQuery,Ajax,
+2. Intégration dec l'Api DAN dans le TP-02 du module-05 (**10 points**)
 
 ---
 
@@ -66,7 +67,7 @@ Ex:
 ---  
 ---         
 
-## SUITE si on avance rapidement sur le programme
+## SUITE SI LES DEUX GROUPES AVANCENT RAPIDEMENT SUR LE TRAVAIL ET TP A FAIRE EN DEHORS DES COURS
 
 ---  
 ---  
