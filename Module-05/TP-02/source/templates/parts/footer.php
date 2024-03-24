@@ -4,6 +4,7 @@
             <li>CGU</li>
             <li>&copy; 2024 Système Gestion Utilisateurs</li>
         </ul>
-    </footer>    
+    </footer>   
+    <script src="functions/api.js"></script> 
 </body>
 </html>
