@@ -58,9 +58,11 @@ Ex:
 ---
 
 
-**Module-07 BIS: Développement web low code et noCode avec WordPress (20 points)**
+**Module-07 : Développement web low code et noCode avec WordPress (20 points)**
 1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**10 points**)
 2. TP-02: Développement de Thèmes et de plugins WordPress (**10 points**)
+
+**Module-08 : PROJET FINAL (20 points)**
 
 ---  
 ---  
