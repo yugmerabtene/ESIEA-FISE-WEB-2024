@@ -56,22 +56,20 @@ Ex:
 
 ---
 
-**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (15 points)**
-1. Partie Analyse et conception de votre application :
-   UML Diagrammes :
-   1. UseCase ( Fonctionnalités de votre application )
-   2. Activité ( Montrant l'activité/parcours d'un utilisateur connecté )
-   3. Sequence ( Monter une sequence important ou la complixité et l'abstration sont compliquer a representer ex: systeme de gesiton d'utilisteur ou autre )
-   4. Classe ( DIagramme de toute les classe de votre app, ainsi que leur ralations )
-   5. TP-01: Développement d'une application au choix avec un systeme de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC  (**10 points**)
-
----
 
 **Module-07 BIS: Développement web low code et noCode avec WordPress (5 points)**
 1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**2.5 points**)
 2. TP-02: Développement de Thèmes et de plugins WordPress (**2.5 points**)
 
 ---
+
+
+##à voir si on avance rapidement sur le programme
+
+
+
+
+
 
 **Module-08: Développement Front-End avec React.js (10 points)**
 1. TP-01: Introduction à React.js (**5 points**)
@@ -86,6 +84,20 @@ Ex:
 
 
 ---
+
+**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (15 points)**
+1. Partie Analyse et conception de votre application :
+   UML Diagrammes :
+   1. UseCase ( Fonctionnalités de votre application )
+   2. Activité ( Montrant l'activité/parcours d'un utilisateur connecté )
+   3. Sequence ( Monter une sequence important ou la complixité et l'abstration sont compliquer a representer ex: systeme de gesiton d'utilisteur ou autre )
+   4. Classe ( DIagramme de toute les classe de votre app, ainsi que leur ralations )
+   5. TP-01: Développement d'une application au choix avec un systeme de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC  (**10 points**)
+
+---
+
+
+
 
 **Module-10: Déploiement d'une application sur un serveur FTP Distant (10 points)**
 1. Réservation de nom de domaine et d'un hébergement web (**1 point**)
