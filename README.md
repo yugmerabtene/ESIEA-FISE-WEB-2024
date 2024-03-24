@@ -53,8 +53,9 @@ Ex:
 ---
 
 **Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (15 points)**
-1. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC  (**5 points**)
-2. UML (Diagramme de classe plus tous les diagrammes du module-04) (**5 points**)
+1. UML (Diagramme de classe plus tous les diagrammes vu lors du module-04 pour la réalisation du TP-01 Module-07) (**5 points**)
+2. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC Multi Layered Architecture  (**5 points**)
+
 3. TD-02 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**5 points**)
 
 ---
