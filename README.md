@@ -81,7 +81,7 @@ Ex:
 ---
 
 **Module-10: Développement web  avec Java Spring (10 points)**
-1. Développement d'une application en SOA microservice  (**10 points**)
+1. TP-01: Développement d'une application en SOA microservice  (**10 points**)
 
 ---
 
