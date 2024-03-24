@@ -1,12 +1,15 @@
-**Programme d'Évaluation:**
+**Cours FullStack Web Developer:**
 **Refaire la meme structure des repo dans vos rendus**  
 Ex: 
+
 ```  
+      
       /Module-05
             /tp-01
                   /source  ( Code source )  
                   readme.md  ( Documentation )  
 ```
+
 ---
 
 **Module-01: Fondamentaux du Web (10 points)**
@@ -51,13 +54,16 @@ Ex:
 **Module-06: JavaScript et Librairie jQuery (10 points)**
 1. TP-01: JavaScript Vanilla, DOM, jQuery, Api DAN, intégration dans le TP-02 du module-05 (**10 points**)
 
-
 ---
 
 **Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (15 points)**
-1. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC  (**5 points**)
-2. UML (Diagramme de classe plus tous les diagrammes du module-04) (**5 points**)
-3. TD-02 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**5 points**)
+1. Partie Analyse et conception de votre application :
+   UML Diagrammes :
+   1. UseCase ( Fonctionnalités de votre application )
+   2. Activité ( Montrant l'activité/parcours d'un utilisateur connecté )
+   3. Sequence ( Monter une sequence important ou la complixité et l'abstration sont compliquer a representer ex: systeme de gesiton d'utilisteur ou autre )
+   4. Classe ( DIagramme de toute les classe de votre app, ainsi que leur ralations )
+   5. TP-01: Développement d'une application au choix avec un systeme de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC  (**10 points**)
 
 ---
 
