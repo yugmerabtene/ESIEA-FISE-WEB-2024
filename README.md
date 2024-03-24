@@ -80,11 +80,8 @@ Ex:
 
 ---
 
-**Module-10: Déploiement d'une application sur un serveur FTP Distant (10 points)**
-1. Réservation de nom de domaine et d'un hébergement web (**1 point**)
-2. Déploiement de l'application (**4 points**)
-3. Mise en place d'un certificat SSL (**2 points**)
-4. Mise en place d'un système de sauvegarde (**3 points**)
+**Module-10: Développement web  avec Java Spring (10 points)**
+1. Développement d'une application en SOA microservice  (**10 points**)
 
 ---
 
