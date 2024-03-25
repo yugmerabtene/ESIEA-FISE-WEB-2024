@@ -20,7 +20,7 @@
                 <?php endif; ?>
                 <label for="adresse">Adresse:</label>
                 <input type="text" id="adresseInput" name="adresse" required>
-                <ul id="suggestionsList"></ul>
+                
                 <?php if (isset($data['errors']['adresse'])) : ?>
                     <p class="error-message"><?php echo $data['errors']['adresse']; ?></p>
                 <?php endif; ?>
