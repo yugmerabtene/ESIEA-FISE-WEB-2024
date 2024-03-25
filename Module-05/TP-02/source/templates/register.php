@@ -19,8 +19,7 @@
                     <p class="error-message"><?php echo $data['errors']['prenom']; ?></p>
                 <?php endif; ?>
                 <label for="adresse">Adresse:</label>
-                <input type="text" id="adresseInput" name="adresse" required>
-                
+                <input type="text" id="adresseInput" name="adresse" required>                
                 <?php if (isset($data['errors']['adresse'])) : ?>
                     <p class="error-message"><?php echo $data['errors']['adresse']; ?></p>
                 <?php endif; ?>
