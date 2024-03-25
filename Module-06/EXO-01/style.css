@@ -1,12 +1,10 @@
-body{
-    font-size: xx-large;
+h1{
+    color: aquamarine;
 }
-header{
-    background-color: aqua;
+.section1{
+    background-color: rgb(56, 201, 201);
 }
-.section2{
-    background-color: red ;
-}
-#section3{
-    background-color: blue;
+
+#section2{
+    background-color: greenyellow;
 }
