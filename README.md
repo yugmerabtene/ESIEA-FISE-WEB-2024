@@ -62,23 +62,6 @@ Ex:
 1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points )
 ---
 
-**Module-08: Développement Front-End avec React.js (10 points)**
-1. TP-01: Introduction à React.js (**5 points**)
-2. TP-02: Création d'une application React.js avec intégration de l'API METEO (**5 points**)
-
-
----
-
-**Module-09: Développement Back-End avec Node.js (10 points)**
-1. TP-01: Introduction à Node.js (**5 points**)
-2. TP-02: Intégration du TP-02 du module-08 avec un backend Node.js (**5 points**)
-
-
----
-
-**Module-10: Développement web  avec Java Spring (10 points)**
-1. TP-01: Développement d'une application en SOA microservice  (**10 points**)
-
----
+**Module-8: Création d'une Application Multicouche avec Java Spring et React.js (15 points)**
 
 **Résumé Total: points sur 100**
