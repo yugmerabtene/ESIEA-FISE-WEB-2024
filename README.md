@@ -52,17 +52,16 @@ Ex:
 
 ---
 
-**Module-07 BIS: Développement web low code et noCode avec WordPress (5 points)**
-1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**2.5 points**)
-2. TP-02: Développement de Thèmes et de plugins WordPress (**2.5 points**)
-
----
-
 **Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (15 points)**
 1. UML (Diagramme de classe plus tous les diagrammes vu lors du module-04 pour la réalisation du TP-01 Module-07) (**5 points**)
 2. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC Multi Layered Architecture  (**5 points**)
 
 3. TD-02 (Hors série) Initiation aux Frameworks PHP, Symfony, Laravel... (**5 points**)
+
+---
+**Module-07 BIS: Développement web low code et noCode avec WordPress (5 points)**
+1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**2.5 points**)
+2. TP-02: Développement de Thèmes et de plugins WordPress (**2.5 points**)
 
 ---
 
