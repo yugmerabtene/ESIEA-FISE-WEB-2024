@@ -59,8 +59,7 @@ Ex:
 ---
 
 **Module-07 BIS: Développement web low code et noCode avec WordPress (5 points)**
-1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points
-2. 
+1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points )
 ---
 
 **Module-08: Développement Front-End avec React.js (10 points)**
