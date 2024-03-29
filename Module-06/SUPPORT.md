@@ -6,6 +6,9 @@
    - Le DOM (Document Object Model) représente la structure d'une page HTML sous forme d'arbre d'objets.
    - Il permet la manipulation dynamique de la structure, du style et du contenu d'une page.
 
+     ![image](https://github.com/yugmerabtene/ESIEA-FISE-WEB-2024/assets/3670077/280d1040-3b8c-4dbe-95ca-c2377b9814d4)
+
+
 #### 1.2 Accès au DOM avec JavaScript
    - Utilisation de `document` pour accéder au DOM.
    - Sélection d'éléments par ID, classe, balise.
@@ -336,3 +339,185 @@
    - [W3Schools JavaScript HTML DOM](https://www.w3schools.com/js.asp)
 
 ---
+
+Bien sûr ! Reprenons le sujet en ajoutant le Browser Object Model (BOM), en donnant plus de détails et en structurant davantage le cours.
+
+---
+
+# Cours sur le DOM et le BOM en JavaScript
+
+## Introduction :
+
+Le DOM (Document Object Model) et le BOM (Browser Object Model) sont deux interfaces essentielles en JavaScript pour interagir avec les documents HTML et le navigateur lui-même. Dans ce cours, nous allons explorer en détail ces deux modèles, en fournissant des exemples pratiques et en mettant en évidence les bonnes pratiques de développement.
+
+## Le DOM (Document Object Model) :
+
+Le DOM est une interface de programmation d'application qui représente la structure d'un document HTML ou XML sous forme d'un arbre d'objets. Il fournit une manière de manipuler dynamiquement la structure, le style et le contenu d'une page web.
+
+### Sélection des éléments :
+
+Pour interagir avec les éléments HTML d'une page, nous utilisons différentes méthodes de sélection.
+
+#### Méthodes de sélection :
+
+- `document.getElementById()`: Sélectionne un élément par son ID.
+- `document.getElementsByClassName()`: Sélectionne des éléments par leur classe.
+- `document.getElementsByTagName()`: Sélectionne des éléments par leur balise.
+- `document.querySelector()`: Sélectionne le premier élément qui correspond au sélecteur CSS spécifié.
+- `document.querySelectorAll()`: Sélectionne tous les éléments qui correspondent au sélecteur CSS spécifié.
+
+Exemple :
+
+```javascript
+// Sélection par ID
+let elementById = document.getElementById('monElement');
+
+// Sélection par classe
+let elementsByClass = document.getElementsByClassName('maClasse');
+
+// Sélection par balise
+let elementsByTag = document.getElementsByTagName('div');
+
+// Sélection avec querySelector
+let firstElement = document.querySelector('.maClasse');
+let allElements = document.querySelectorAll('.maClasse');
+```
+
+### Manipulation des éléments :
+
+Une fois que nous avons sélectionné des éléments, nous pouvons les manipuler en modifiant leur contenu, leurs attributs, leurs styles, etc.
+
+#### Manipulation du contenu :
+
+- `innerHTML`: Modifie le contenu HTML d'un élément.
+- `innerText` / `textContent`: Modifie le texte d'un élément.
+- `createElement()`: Crée un nouvel élément.
+- `appendChild()`: Ajoute un élément enfant à un élément parent.
+
+Exemple :
+
+```javascript
+// Modification du contenu HTML
+element.innerHTML = '<p>Nouveau contenu</p>';
+
+// Modification du texte
+element.innerText = 'Nouveau texte';
+
+// Création d'un nouvel élément
+let newElement = document.createElement('div');
+newElement.innerText = 'Nouvel élément';
+
+// Ajout du nouvel élément
+parentElement.appendChild(newElement);
+```
+
+#### Manipulation des attributs :
+
+- `getAttribute()`: Obtient la valeur d'un attribut.
+- `setAttribute()`: Définit la valeur d'un attribut.
+- `removeAttribute()`: Supprime un attribut.
+
+Exemple :
+
+```javascript
+// Obtention de la valeur de l'attribut
+let value = element.getAttribute('href');
+
+// Définition de la valeur de l'attribut
+element.setAttribute('href', 'https://example.com');
+
+// Suppression de l'attribut
+element.removeAttribute('href');
+```
+
+#### Manipulation des styles :
+
+- `style`: Permet d'accéder aux styles CSS d'un élément.
+- `classList`: Permet de gérer les classes CSS d'un élément.
+
+Exemple :
+
+```javascript
+// Modification du style
+element.style.color = 'red';
+element.style.fontSize = '20px';
+
+// Gestion des classes
+element.classList.add('nouvelleClasse');
+element.classList.remove('ancienneClasse');
+element.classList.toggle('classeToggle');
+```
+
+### Événements :
+
+En JavaScript, nous pouvons attacher des fonctions aux événements sur les éléments DOM.
+
+#### Ajout d'événements :
+
+- `addEventListener()`: Définit une fonction à exécuter lorsqu'un événement spécifié se produit.
+
+Exemple :
+
+```javascript
+element.addEventListener('click', () => {
+    // Code à exécuter lors du clic sur l'élément
+});
+```
+
+### Fonctions traditionnelles vs Fonctions fléchées :
+
+Nous avons le choix entre des fonctions traditionnelles et des fonctions fléchées pour définir des comportements.
+
+#### Fonctions traditionnelles :
+
+```javascript
+element.addEventListener('click', function() {
+    // Code à exécuter
+});
+```
+
+#### Fonctions fléchées :
+
+```javascript
+element.addEventListener('click', () => {
+    // Code à exécuter
+});
+```
+
+## Bonnes pratiques :
+
+- Utilisez des sélecteurs spécifiques pour éviter les recherches coûteuses.
+- Stockez les sélections DOM dans des variables pour une utilisation répétée.
+- Séparez la structure HTML, le style CSS et le comportement JavaScript.
+- Utilisez des classes CSS pour la manipulation des styles plutôt que de les modifier directement.
+
+## Le BOM (Browser Object Model) :
+
+Le BOM est une interface pour interagir avec le navigateur web. Il fournit des objets tels que `window`, `document`, `navigator`, etc.
+
+### Objets principaux du BOM :
+
+- `window`: Représente la fenêtre du navigateur.
+- `document`: Représente le document chargé dans la fenêtre du navigateur.
+- `navigator`: Fournit des informations sur le navigateur de l'utilisateur.
+- `location`: Fournit des informations sur l'URL du document en cours.
+
+Exemple :
+
+```javascript
+// Ouvrir une nouvelle fenêtre
+window.open('https://example.com');
+
+// Rediriger vers une nouvelle URL
+window.location.href = 'https://example.com';
+
+// Afficher des informations sur le navigateur
+console.log(navigator.userAgent);
+
+// Obtenir l'URL du document
+console.log(location.href);
+```
+
+## Conclusion :
+
+Le DOM et le BOM sont des concepts essentiels en développement web JavaScript. En comprenant ces modèles et en utilisant les bonnes pratiques, vous pouvez créer des applications web dynamiques et interactives avec une meilleure organisation et une maintenance facilitée.
