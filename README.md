@@ -47,7 +47,7 @@ Ex:
 
 ---
 
-**Module-06: JavaScript et Librairie jQuery (10 points)**
+**Module-06: JavaScript et Librairie jQuery (15 points)**
 1. TP-01: JavaScript Vanilla, DOM, BOM, jQuery, Api DAN, intégration dans le TP-02 du module-05 (**10 points**)
 
 ---
@@ -58,10 +58,11 @@ Ex:
 
 ---
 
-**Module-07 BIS: Développement web low code et noCode avec WordPress (5 points)**
-1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points )
+**Module-07 BIS: Développement web low code et noCode avec WordPress (10 points)**
+1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**10 points )
 ---
 
-**Module-8: Création d'une Application Multicouche avec Java Spring et React.js (15 points)**
+**Module-8: Création d'une Application Multicouche avec Java Spring et React.js (20 points)**
+1. TP-01 Développer une application multi-couche MVC avec Java Spring Et React.JS  
 
 **Résumé Total: points sur 100**
