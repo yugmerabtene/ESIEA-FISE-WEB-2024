@@ -1,7 +1,7 @@
 # Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP
 
 ## Introduction:
-Le Module-07 se concentre sur le développement web orienté objet en PHP, en mettant particulièrement l'accent sur l'architecture Modèle-Vue-Contrôleur (MVC). Nous aborderons le TP-01 qui consiste à développer une application de gestion d'utilisateurs avec des rôles en PHP orienté objet et en suivant le modèle MVC. Nous explorerons également l'utilisation de l'UML pour la modélisation, ainsi qu'une initiation aux frameworks PHP tels que Symfony et Laravel.
+Le Module-07 se concentre sur le développement web orienté objet en PHP, en mettant particulièrement l'accent sur l'architecture Modèle-Vue-Contrôleur (MVC). Nous aborderons le TP-01 qui consiste à développer une application de gestion d'utilisateurs avec des rôles en PHP orienté objet et en suivant le modèle MVC. Nous explorerons également l'utilisation de l'UML pour la modélisation.
 
 ## Partie 1: TP-01 - Développement d'une Application de Gestion d'Utilisateurs avec Rôles en PHP POO / Modèle MVC (5 points)
 
