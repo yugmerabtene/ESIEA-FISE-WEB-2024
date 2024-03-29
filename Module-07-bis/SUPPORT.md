@@ -2,7 +2,7 @@
 
 ## Introduction:
 Le Module-07 BIS se concentre sur le développement web avec WordPress en utilisant l'outil Elementor, qui permet une approche low code et no code pour la création de sites web. Nous explorerons deux TP essentiels : TP-01 pour la création d'un site web responsive avec Elementor, et TP-02 pour le développement de thèmes et de plugins WordPress personnalisés.
-
+ 
 ## TP-01: Création d'un Site Web Responsive avec Elementor (2.5 points)
 
 ### Contenu du TP:
