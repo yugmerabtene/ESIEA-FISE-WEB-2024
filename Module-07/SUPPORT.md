@@ -4,9 +4,9 @@
 ## Introduction:
 Le Module-07 se concentre sur le développement web orienté objet en PHP, en mettant particulièrement l'accent sur l'architecture Modèle-Vue-Contrôleur (MVC). Nous aborderons le TP-01 qui consiste à développer une application de gestion d'utilisateurs avec des rôles en PHP orienté objet et en suivant le modèle MVC. Nous explorerons également l'utilisation de l'UML pour la modélisation.
 =======
-### TP-01: 
-### Analyse et conception diagramme UML
->>>>>>> 142c1602d70f82202ad57ca899f54b18698a27a3
+**TP-01**: 
+**Analyse et conception diagramme UML** 
+
 
 #### Objectif:
 Le but de ce TP est de concevoir et de développer une application web de gestion d'utilisateurs avec PHP utilisant une approche orientée objet et le modèle-vue-contrôleur (MVC).
