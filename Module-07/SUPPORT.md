@@ -8,8 +8,8 @@
 PHP est un langage de programmation largement utilisé pour le développement web. Dans sa version orientée objet, PHP permet une organisation plus structurée et modulaire du code, favorisant la réutilisabilité et la maintenance. Voici les principaux concepts de la programmation orientée objet en PHP :
 
 1. **Classes et Objets** :
-   - Une classe est un modèle pour créer des objets. Elle définit les propriétés et les méthodes communes à tous les objets de ce type.
-   - Un objet est une instance d'une classe, créée à partir du mot-clé `new`. Chaque objet possède ses propres valeurs pour les propriétés définies dans la classe.
+   - Une classe est un modèle pour créer des objets. Elle définit les attributs et les méthodes communes à tous les objets de ce type.
+   - Un objet est une instance d'une classe, créée à partir du mot-clé `new`. Chaque objet possède ses propres valeurs pour les attributs définies dans la classe.
 
 Exemple de déclaration de classe et d'instanciation d'objet en PHP :
 
