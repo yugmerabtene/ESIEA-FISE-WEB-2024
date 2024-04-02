@@ -25,5 +25,5 @@
 
 5. **Programmation Orientée Objet PHP (POO)** (2/20):
    - Utilisation des principes de POO (1/20)
-   - Mise en place des méthodes et propriétés (0.5/20)
+   - Mise en place des méthodes et attributs (0.5/20)
    - Utilisation de l'autoloading des classes (0.5/20)
