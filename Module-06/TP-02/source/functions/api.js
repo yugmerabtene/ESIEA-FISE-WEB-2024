@@ -27,3 +27,20 @@ function afficherSuggestions(suggestions) {
         suggestionsList.appendChild(li);
     });
 }
+/*
+function validateSuggestion(suggestions){
+    suggestionsList.innerHTML = '' // efface les suggestions
+
+    suggestions.forEach(suggestion => {
+        const li = document.createElement('li');
+        li.texteContentList.appendChild(li);
+        li.ATTRIBUTE_NODE = document.ATTRIBUTE_NODE;
+        li.document.ATTRIBUTE_NODE = document.ATTRIBUTE_NODE;
+
+        if(li > 5){
+            return $errors;
+
+        }
+    })
+}
+*/

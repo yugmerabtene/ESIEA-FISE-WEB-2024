@@ -143,4 +143,5 @@ function closeAccount($id) {
         throw new Exception("Erreur lors de la fermeture du compte de l'utilisateur : " . $e->getMessage());
     }
 }
+
 ?>
