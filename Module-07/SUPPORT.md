@@ -8,8 +8,8 @@
 PHP est un langage de programmation largement utilisé pour le développement web. Dans sa version orientée objet, PHP permet une organisation plus structurée et modulaire du code, favorisant la réutilisabilité et la maintenance. Voici les principaux concepts de la programmation orientée objet en PHP :
 
 1. **Classes et Objets** :
-   - Une classe est un modèle pour créer des objets. Elle définit les propriétés et les méthodes communes à tous les objets de ce type.
-   - Un objet est une instance d'une classe, créée à partir du mot-clé `new`. Chaque objet possède ses propres valeurs pour les propriétés définies dans la classe.
+   - Une classe est un modèle pour créer des objets. Elle définit les attributs et les méthodes communes à tous les objets de ce type.
+   - Un objet est une instance d'une classe, créée à partir du mot-clé `new`. Chaque objet possède ses propres valeurs pour les attributs définies dans la classe.
 
 Exemple de déclaration de classe et d'instanciation d'objet en PHP :
 
@@ -255,3 +255,114 @@ Maintenant que nous avons vu les principes de base de la POO et du MVC en PHP, n
    - Préparer une présentation pour démontrer l'application et expliquer sa conception et son utilisation.
 
 ---
+
+**Exemple simple d'une application en MVC**  
+
+1. **Autoloader (Autoloader.php)** :
+```php
+<?php
+class Autoloader {
+    public static function register() {
+        spl_autoload_register(function ($class) {
+            $file = __DIR__ . '/' . $class . '.php';
+            if (file_exists($file)) {
+                require_once $file;
+                return true;
+            }
+            return false;
+        });
+    }
+}
+?>
+```
+
+2. **Modèle (UtilisateurModel.php)** :
+```php
+<?php
+class UtilisateurModel {
+    public function recupererTousUtilisateurs() {
+        // Code pour récupérer tous les utilisateurs depuis la base de données
+        // Cet exemple suppose l'utilisation d'une base de données fictive
+        return [
+            (object) ['id' => 1, 'nom' => 'Jean', 'email' => 'jean@example.com'],
+            (object) ['id' => 2, 'nom' => 'Marie', 'email' => 'marie@example.com'],
+            (object) ['id' => 3, 'nom' => 'Pierre', 'email' => 'pierre@example.com']
+        ];
+    }
+
+    public function recupererUtilisateurParId($id) {
+        // Code pour récupérer un utilisateur par son ID depuis la base de données
+        // Cet exemple suppose l'utilisation d'une base de données fictive
+        $utilisateurs = $this->recupererTousUtilisateurs();
+        foreach ($utilisateurs as $utilisateur) {
+            if ($utilisateur->id == $id) {
+                return $utilisateur;
+            }
+        }
+        return null;
+    }
+}
+?>
+```
+
+3. **Vue (liste_utilisateurs.php)** :
+```php
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des utilisateurs</title>
+</head>
+<body>
+    <h1>Liste des utilisateurs</h1>
+    <ul>
+        <?php foreach ($utilisateurs as $utilisateur): ?>
+            <li><?= $utilisateur->nom ?></li>
+        <?php endforeach; ?>
+    </ul>
+</body>
+</html>
+```
+
+4. **Contrôleur (UtilisateurController.php)** :
+```php
+<?php
+class UtilisateurController {
+    public function afficherListe() {
+        $utilisateurModel = new UtilisateurModel();
+        $utilisateurs = $utilisateurModel->recupererTousUtilisateurs();
+        include 'liste_utilisateurs.php';
+    }
+
+    public function afficherDetails($id) {
+        $utilisateurModel = new UtilisateurModel();
+        $utilisateur = $utilisateurModel->recupererUtilisateurParId($id);
+        if ($utilisateur) {
+            echo "Nom : " . $utilisateur->nom . "<br>";
+            echo "Email : " . $utilisateur->email . "<br>";
+        } else {
+            echo "Utilisateur non trouvé.";
+        }
+    }
+}
+?>
+```
+
+5. **Index (index.php)** :
+```php
+<?php
+// Inclusion de l'autoloader
+require_once 'Autoloader.php';
+Autoloader::register();
+
+// Instanciation du contrôleur
+$utilisateurController = new UtilisateurController();
+
+// Affichage de la liste des utilisateurs
+$utilisateurController->afficherListe();
+
+// Affichage des détails d'un utilisateur
+echo "<h2>Détails de l'utilisateur avec l'ID 2 :</h2>";
+$utilisateurController->afficherDetails(2);
+?>
+```
+
