@@ -62,7 +62,7 @@ Ex:
 1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points )
 ---
 
-**Module-8: Création d'une Application Multicouche avec Java Spring et React.js (20 points)**
-1. TP-01 Développer une application multi-couche MVC avec Java Spring Et React.JS  
+**Module-8: Création d'une Application Mobile Cross-Plateforme avec ReactNative (20 points)**
+1. TP-01 Développer une application Application Mobile Cross-Plateforme avec React Native  
 
 **Résumé Total: points sur 100**
