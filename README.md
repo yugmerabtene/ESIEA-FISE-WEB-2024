@@ -63,9 +63,8 @@ Ex:
 ---
 
 **Module-08: Développement d'une application web projet final (20 points)**
-1. Développer une application web, architecturé en MVC dans le langage de votre choix, en passant par la phase
+1. Développer une application web, architecturée en MVC ou en suivant une architeture web connu type (micro-service SOA, hexagonale...)dans le langage de votre choix, en passant par la phase
    analyse "des besoins" et conception "UML" (**20 points**)
-
 
 ---
 
