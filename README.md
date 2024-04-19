@@ -52,9 +52,9 @@ Ex:
 
 ---
 
-**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (20 points)**
-1. UML (Diagramme de classe plus tous les diagrammes vu lors du module-04 pour la réalisation du TP-01 Module-07) (**10 points**)
-2. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC Multi Layered Architecture  (**10 points**)
+**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (40 points)**
+1. UML (Diagramme de classe plus tous les diagrammes vu lors du module-04 pour la réalisation du TP-01 Module-07) (**20 points**)
+2. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC Multi Layered Architecture  (**20 points**)
 
 ---
 
@@ -62,7 +62,5 @@ Ex:
 1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points )
 ---
 
-**Module-8: Création d'une Application Mobile Cross-Plateforme avec ReactNative (20 points)**
-1. TP-01 Développer une application Application Mobile Cross-Plateforme avec React Native  
 
 **Résumé Total: points sur 100**
