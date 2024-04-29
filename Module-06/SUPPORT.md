@@ -340,9 +340,7 @@
 
 ---
 
-Bien sûr ! Reprenons le sujet en ajoutant le Browser Object Model (BOM), en donnant plus de détails et en structurant davantage le cours.
 
----
 
 # Cours sur le DOM et le BOM en JavaScript
 
