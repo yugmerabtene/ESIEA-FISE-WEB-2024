@@ -52,7 +52,7 @@ Ex:
 
 ---
 
-**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (20 points)**
+**Module-07: Développement Web Orienté Objet et Modèle-Vue-Contrôleur (MVC) en PHP (40 points)**
 1. UML (Diagramme de classe plus tous les diagrammes vu lors du module-04 pour la réalisation du TP-01 Module-07) (**10 points**)
 2. TP-01: Développement d'une application de gestion d'utilisateurs avec Roles en PHP POO / Modèle MVC Multi Layered Architecture  (**10 points**)
 
@@ -60,11 +60,6 @@ Ex:
 
 **Module-07 BIS: Développement web low code et noCode avec WordPress (5 points)**
 1. TP-01: Création d'un site web responsive avec un éditeur de bloc (**5 points )
----
-
-**Module-08: Développement d'une application web projet final (20 points)**
-1. Développer une application web, architecturée en MVC ou en suivant une architeture web connu type (micro-service SOA, hexagonale...)dans le langage de votre choix, en passant par la phase
-   analyse "des besoins" et conception "UML" (**20 points**)
 
 ---
 
